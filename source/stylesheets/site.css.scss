@@ -1,6 +1,7 @@
-@import '../../bower_components/foundation-sites/assets/foundation';
-@import 'globals/foundation_settings';
+@import 'foundation-sites/scss/util/util';
 @import 'globals/variables';
+@import 'globals/foundation_settings';
+@import 'globals/foundation_includes';
 @import 'globals/layout';
 @import 'globals/typo';
 
