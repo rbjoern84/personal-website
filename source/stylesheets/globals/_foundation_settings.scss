@@ -67,7 +67,7 @@
 
 // $global-font-size: 100%;
 // $global-width: rem-calc(1200);
-// $global-lineheight: 1.5;
+$global-lineheight: $lh-normal;
 // $foundation-palette: (
 //   primary: #1779ba,
 //   secondary: #767676,
@@ -82,13 +82,13 @@
 // $white: #fefefe;
 // $body-background: $white;
 // $body-font-color: $black;
-// $body-font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+$body-font-family: $font-stack-sans;
 // $body-antialiased: true;
-// $global-margin: 1rem;
-// $global-padding: 1rem;
-// $global-position: 1rem;
-// $global-weight-normal: normal;
-// $global-weight-bold: bold;
+$global-margin: $sp-base;
+$global-padding: $sp-base;
+$global-position: $sp-base;
+$global-weight-normal: $fw-regular;
+$global-weight-bold: $fw-bold;
 // $global-radius: 0;
 // $global-menu-padding: 0.7rem 1rem;
 // $global-menu-nested-margin: 1rem;
@@ -130,30 +130,30 @@
 // // ------------------
 
 // $header-font-family: $body-font-family;
-// $header-font-weight: $global-weight-normal;
+$header-font-weight: $global-weight-bold;
 // $header-font-style: normal;
 // $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
 // $header-color: inherit;
-// $header-lineheight: 1.4;
-// $header-margin-bottom: 0.5rem;
-// $header-styles: (
-//   small: (
-//     'h1': ('font-size': 24),
-//     'h2': ('font-size': 20),
-//     'h3': ('font-size': 19),
-//     'h4': ('font-size': 18),
-//     'h5': ('font-size': 17),
-//     'h6': ('font-size': 16),
-//   ),
-//   medium: (
-//     'h1': ('font-size': 48),
-//     'h2': ('font-size': 40),
-//     'h3': ('font-size': 31),
-//     'h4': ('font-size': 25),
-//     'h5': ('font-size': 20),
-//     'h6': ('font-size': 16),
-//   ),
-// );
+$header-lineheight: $lh-small;
+$header-margin-bottom: 1.5rem;
+$header-styles: (
+  small: (
+    'h1': ('font-size': $fs-xlarge * 0.7),
+    'h2': ('font-size': $fs-large * 0.8),
+    'h3': ('font-size': $fs-big * 0.9),
+    'h4': ('font-size': $fs-medium),
+    'h5': ('font-size': $fs-base),
+    'h6': ('font-size': $fs-small),
+  ),
+  medium: (
+    'h1': ('font-size': $fs-xlarge),
+    'h2': ('font-size': $fs-large),
+    'h3': ('font-size': $fs-big),
+    'h4': ('font-size': $fs-medium),
+    'h5': ('font-size': $fs-base),
+    'h6': ('font-size': $fs-small),
+  ),
+);
 // $header-text-rendering: optimizeLegibility;
 // $small-font-size: 80%;
 // $header-small-font-color: $medium-gray;
