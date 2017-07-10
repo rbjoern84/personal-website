@@ -8,6 +8,9 @@ end
 # Using Sprockets for the asset pipeline
 activate :sprockets
 
+# Include bower components in the sprockets asset pipeline
+sprockets.append_path File.join "#{root}", "bower_components"
+
 # Layouts
 # https://middlemanapp.com/basics/layouts/
 
