@@ -138,16 +138,16 @@ $header-lineheight: $lh-small;
 $header-margin-bottom: 1.5rem;
 $header-styles: (
   small: (
-    'h1': ('font-size': $fs-xlarge * 0.7),
-    'h2': ('font-size': $fs-large * 0.8),
-    'h3': ('font-size': $fs-big * 0.9),
+    'h1': ('font-size': $fs-large * 0.7),
+    'h2': ('font-size': $fs-big * 0.9),
+    'h3': ('font-size': $fs-big * 0.8),
     'h4': ('font-size': $fs-medium),
     'h5': ('font-size': $fs-base),
     'h6': ('font-size': $fs-small),
   ),
   medium: (
-    'h1': ('font-size': $fs-xlarge),
-    'h2': ('font-size': $fs-large),
+    'h1': ('font-size': $fs-large),
+    'h2': ('font-size': $fs-big),
     'h3': ('font-size': $fs-big),
     'h4': ('font-size': $fs-medium),
     'h5': ('font-size': $fs-base),

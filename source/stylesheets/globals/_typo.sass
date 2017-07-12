@@ -1,6 +1,9 @@
 body, html
   font-size: calc(0.75rem + 0.5vw)
 
+h1, h2
+  font-weight: $fw-black
+
 .like-h1
   @extend h1
 
@@ -19,6 +22,33 @@ body, html
 .like-h6
   @extend h6
 
+p, li
+  font-size: $fs-base
+
 .text-caps
   text-transform: uppercase
   letter-spacing: 0.05em
+
+.text-small
+  font-size: $fs-small
+
+.text-xsmall
+  font-size: $fs-xsmall
+
+.text-primary
+  color: $c-primary
+
+.text-secondary
+  color: $c-secondary
+
+.text-grey
+  color: $c-grey-base
+
+.text-black
+  color: $c-black
+
+.text-bold
+  font-weight: $fw-bold
+
+.text-grey-muted
+  color: $c-grey-muted
