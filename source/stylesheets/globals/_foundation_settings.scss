@@ -111,7 +111,7 @@ $global-weight-bold: $fw-bold;
 //   xxlarge: 1440px,
 // );
 // $print-breakpoint: large;
-// $breakpoint-classes: (small medium large);
+$breakpoint-classes: (small medium large xlarge);
 
 // // 3. The Grid
 // // -----------
@@ -852,10 +852,12 @@ $header-styles: (
 // $xy-grid: true;
 // $grid-container: $global-width;
 // $grid-columns: 12;
-// $grid-margin-gutters: (
-//   small: 20px,
-//   medium: 30px
-// );
+$grid-margin-gutters: (
+  small: $gutter-small,
+  medium: $gutter-medium,
+  large: $gutter-medium,
+  xlarge: $gutter-large
+);
 // $grid-padding-gutters: $grid-margin-gutters;
 // $grid-container-padding: $grid-padding-gutters;
 // $grid-container-max: $global-width;
