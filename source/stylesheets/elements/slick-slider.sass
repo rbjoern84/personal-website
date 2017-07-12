@@ -1,0 +1,121 @@
+$slider-arrow-size: rem-calc(60)
+$slider-arrow-icon-size: rem-calc(15)
+$slider-controls-color: $c-primary
+
+.slick-slide
+  opacity: 0
+  transition: transform 1s .25s, opacity .5s
+  position: relative
+
+  img
+    margin: 0 auto
+
+.slick-slide.slick-center
+  opacity: 1
+
+.slick-prev,
+.slick-next
+  position: absolute
+  display: block
+  height: $slider-arrow-size
+  width: $slider-arrow-size
+  cursor: pointer
+  color: transparent
+  top: 50%
+  transform: translateY(-50%)
+  padding: 0
+  border: $slider-arrow-size/2 solid transparent
+  border-radius: 50%
+  outline: none
+  transition: border .3s
+
+  &:before
+    content: ""
+    display: block
+    width: $slider-arrow-icon-size
+    height: $slider-arrow-icon-size
+    position: absolute
+    top: 50%
+    left: 50%
+    border-color: $slider-controls-color
+    border-style: solid
+    border-width: 2px 2px 0 0
+
+  &:focus
+    border: $slider-arrow-size/2 solid rgba($slider-controls-color, 0.1)
+
+  &:hover
+    outline: none
+    border: 1px solid rgba($slider-controls-color, 0.2)
+
+  &.slick-disabled:before
+    opacity: 0
+
+.slick-prev
+  left: -$slider-arrow-size*1.25
+  transform: translateY(-50%)
+
+  [dir="rtl"] &
+    left: auto
+    right: -$slider-arrow-size*1.25
+
+  &:before
+    left: 50%
+    transform: translate(-25%, -50%) rotate(-135deg)
+
+    [dir="rtl"] &
+      right: 50%
+      transform: translate(-75%, -50%) rotate(45deg)
+
+.slick-next
+  right: -$slider-arrow-size*1.25
+
+  [dir="rtl"] &
+    left: -$slider-arrow-size*1.25
+    right: auto
+
+  &:before
+    right: 50%
+    transform: translate(-75%, -50%) rotate(45deg)
+
+    [dir="rtl"] &
+      left: 50%
+      transform: translate(-25%, -50%) rotate(-135deg)
+
+.slick-dots
+  text-align: center
+  margin-top: $sp-base
+
+  li
+    display: inline-block
+
+    button
+      color: transparent
+      position: relative
+      margin: $sp-small $sp-small 0 $sp-small
+      width: rem-calc(20)
+      height: rem-calc(20)
+      cursor: pointer
+
+      &:before
+        content: ""
+        position: absolute
+        display: block
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        width: 50%
+        height: 0
+        margin: auto
+        border: 1px solid rgba($slider-controls-color, 0.75)
+        transition: width .4s, height .4s, border-radius .4s, border .4s
+
+    &.slick-active button,
+    button:hover
+
+      &:before
+        width: 10px
+        height: 10px
+        border-radius: 50%
+        border-width: 2px
+
