@@ -1,0 +1,150 @@
+.device
+  border-radius: 5px 5px 0 0
+  box-shadow: $tile-box-shadow
+
+// desktop
+
+.device.desktop
+  margin: 0 auto
+
+  + hr
+    margin: 0 auto
+    border-color: $c-grey-light
+
+  &.left
+    margin-left: 5%
+
+  &.right
+    margin-right: 5%
+
+.device--desktop__header
+  width: 100%
+  background-color: #ddd
+  border-radius: 5px 5px 0 0
+  border-bottom: 1px solid rgba(black, .05)
+  position: relative
+  z-index: 10
+
+.bullet
+  float: left
+  width: 5px
+  height: 5px
+  border-radius: 50%
+  border: 1px solid rgba(black, .1)
+  margin: rem-calc(5) 0 rem-calc(4) rem-calc(5)
+
+.bullet--close
+  background-color: $c-close
+
+.bullet--minimize
+  background-color: $c-minimize
+
+.bullet--maximize
+  background-color: $c-maximize
+
+
+// Smartphone
+
+.device.mobile
+  padding: 0 rem-calc(5)
+  background: linear-gradient($c-white, $c-grey-xlight)
+  border-radius: 2.25vw
+  width: auto
+  margin: $sp-small
+  transition: transform .3s .5s
+  transform: scale(.8)
+
+  &:nth-of-type(2)
+    transition: transform .6s .5s
+
+  &:nth-of-type(3)
+    transition: transform 1s .5s
+
+  .slick-current &
+    transform: scale(1)
+
+.device--mobile__header,
+.device--mobile__footer
+  width: 100%
+
+.device--mobile__image
+  width: 18vw
+  height: 31vw
+  background-repeat: no-repeat
+  background-size: 100% auto
+  background-position: center top
+  border: 1px solid $c-grey-light
+  border-radius: 2px
+
+.speaker
+  height: 0.4vw
+  width: 20%
+  background-color: $c-grey-muted
+  margin: 12% auto
+  border-radius: 2px
+
+.home-button
+  border-radius: 50%
+  width: 16%
+  padding-bottom: 15%
+  border: 1px solid $c-grey-light
+  margin: 5% auto
+
+// Desktop + Smartphone
+
+.mobile.left,
+.mobile.right
+  position: absolute
+  bottom: $sp-base
+  z-index: 10
+  transition-delay: .5s
+
+  .device--mobile__image
+    width: 14vw
+    height: 24vw
+
+.mobile.left
+  left: $sp-base
+  transform: translateX(-200%)
+
+.mobile.right
+  right: $sp-base
+  transform: translateX(200%)
+
+
++breakpoint(medium down)
+
+  .device.desktop.left,
+  .device.desktop.right
+    width: 85%
+
+  .device.desktop.left
+    margin-left: 0
+
+  .device.desktop.right
+    margin-right: 0
+
++breakpoint(medium)
+
+  .bullet
+    width: 7px
+    height: 7px
+
+  .device.desktop
+    width: 85%
+
+  .device.mobile
+    margin: $sp-base
+
+  .device--mobile__image
+    width: 15vw
+    height: 26vw
+
++breakpoint(large)
+
+  .device.desktop
+    width: 75%
+
+  .bullet
+    width: 9px
+    height: 9px
