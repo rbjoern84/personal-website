@@ -46,6 +46,9 @@ page '/*.txt', layout: false
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
 
+# Enable testing the build locally
+activate :relative_assets
+
 configure :build do
   activate :minify_css
   activate :minify_javascript
