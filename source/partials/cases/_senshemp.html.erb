@@ -7,19 +7,15 @@
       <div class="cell medium-11 large-10">
         <div class="carousel">
           <div>
-            <div class="device desktop right">
+            <div class="device desktop left">
               <%= partial 'partials/device_desktop' %>
               <%= image_tag 'senshemp/senshemp1.jpg' %>
             </div>
             <hr />
-            <div class="device mobile left">
-              <div class="device--mobile__header">
-                <div class="speaker"></div>
-              </div>
+            <div class="device mobile right">
+              <%= partial 'partials/device_mobile_header' %>
               <div class="device--mobile__image" style="background-image: url('../images/senshemp/senshemp-mobile1.jpg')"></div>
-              <div class="device--mobile__footer">
-                <div class="home-button"></div>
-              </div>
+              <%= partial 'partials/device_mobile_footer' %>
             </div>
           </div>
           <div>
