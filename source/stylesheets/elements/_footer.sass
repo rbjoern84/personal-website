@@ -1,0 +1,46 @@
+footer
+  padding-top: 0
+
+.social-links
+  text-align: center
+
+  li
+    display: inline-block
+    overflow: hidden
+
+    a
+      display: block
+      width: rem-calc(60)
+      height: rem-calc(60)
+      color: transparent
+      background-size: 40%
+      background-repeat: no-repeat
+      background-position: center
+      transition: border .3s
+      border: rem-calc(30) solid transparent
+      border-radius: 50%
+      position: relative
+      cursor: pointer
+
+      &:hover
+        border: 1px solid rgba($c-primary, 0.2)
+
+      &:before
+        content: ""
+        display: block
+        width: 2rem
+        height: 2rem
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        cursor: pointer
+
+.linkedin a:before
+  background-image: image-url('linkedin.svg')
+
+.xing a:before
+  background-image: image-url('xing.svg')
+
+.github a:before
+  background-image: image-url('github.svg')
