@@ -12,6 +12,7 @@ section, footer
 
 .selfie
   background-color: #FFFBF3
+  overflow: hidden
 
   img
     mix-blend-mode: multiply
@@ -40,3 +41,8 @@ ul
 .p-bottom-0,
 .cell.p-bottom-0
   padding-bottom: 0
+
++breakpoint(small down)
+
+  .selfie img
+    max-width: 150%
