@@ -14,21 +14,21 @@
             <hr />
             <div class="device mobile right">
               <%= partial 'partials/device_mobile_header' %>
-              <div class="device--mobile__image" style="background-image: url('../images/senshemp/senshemp-mobile1.jpg')"></div>
+              <div class="device--mobile__image" style="<%= background_image('senshemp/senshemp-mobile1.jpg') %>"></div>
               <%= partial 'partials/device_mobile_footer' %>
             </div>
           </div>
           <div>
             <div class="device desktop">
               <%= partial 'partials/device_desktop' %>
-              <%= image_tag 'senshemp/senshemp2.jpg' %>
+              <img data-lazy="<%= image_path('senshemp/senshemp2.jpg') %>" alt="senshemp2.jpg">
             </div>
             <hr>
           </div>
           <div>
             <div class="device desktop">
               <%= partial 'partials/device_desktop' %>
-              <%= image_tag 'senshemp/senshemp3.jpg' %>
+              <img data-lazy="<%= image_path('senshemp/senshemp3.jpg') %>" alt="senshemp3.jpg">
             </div>
             <hr>
           </div>
