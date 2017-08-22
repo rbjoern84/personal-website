@@ -11,6 +11,7 @@ $(document).ready( function(){
     centerMode: true,
     centerPadding: '0',
     slidesToShow: 1,
+    lazyLoad: 'ondemand',
 
     responsive: [{
 
