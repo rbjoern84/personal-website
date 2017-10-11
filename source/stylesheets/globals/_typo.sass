@@ -25,6 +25,22 @@ h1, h2
 p, li
   font-size: $fs-base
 
+p a
+  transition: box-shadow .2s, background-color .2s, transform .5s, border-radius .4s
+  display: inline-block
+  border-radius: 0 200% 0 0
+
+  &:hover
+    color: $c-primary
+    box-shadow: 0 0 80px 20px $c-link-hover-bg
+    padding: 2px 8px
+    margin: -2px -8px
+    transform: translateY(-1px)
+    position: relative
+    z-index: 1000
+    background-color: $c-white
+    border-radius: 0
+
 .text-caps
   text-transform: uppercase
   letter-spacing: 0.05em
