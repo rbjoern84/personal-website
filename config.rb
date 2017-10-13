@@ -46,6 +46,9 @@ page '/*.txt', layout: false
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
 
+# Improve caching
+activate :asset_hash
+
 # Enable testing the build locally
 activate :relative_assets
 
