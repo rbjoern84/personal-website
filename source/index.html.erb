@@ -1,11 +1,11 @@
 ---
 title: Björn Richter – Product Designer and Frontend Developer
 ---
-
+<div class="menu-btn-stage hide-for-medium"></div>
 <div class="selfie">
   <%= image_tag 'selfie.jpg', :alt => "Selfie" %>
 </div>
-<section class="intro">
+<section id="about" class="intro">
   <div class="grid-x grid-padding-x align-center">
     <div class="cell medium-10 large-5 text-center large-text-right">
       <h2 class="like-h4 text-grey">Hi, I'm Björn Richter,</h2>
@@ -23,13 +23,15 @@ title: Björn Richter – Product Designer and Frontend Developer
     </div>
   </div>
 </section>
-<%= partial 'partials/cases/alchemy' %>
-<%= partial 'partials/cases/senshemp' %>
-<%= partial 'partials/cases/freud' %>
-<%= partial 'partials/cases/majestic' %>
-<%= partial 'partials/cases/typo' %>
-<%= partial 'partials/cases/beyond' %>
-<%= partial 'partials/cases/insufflator' %>
-<%#= partial 'partials/cases/lemke' %>
+<div id="work">
+  <%= partial 'partials/cases/alchemy' %>
+  <%= partial 'partials/cases/senshemp' %>
+  <%= partial 'partials/cases/freud' %>
+  <%= partial 'partials/cases/majestic' %>
+  <%= partial 'partials/cases/typo' %>
+  <%= partial 'partials/cases/beyond' %>
+  <%= partial 'partials/cases/insufflator' %>
+  <%#= partial 'partials/cases/lemke' %>
+</div>
 <%= partial "partials/vita" %>
 <%= javascript_include_tag 'slick'  %>

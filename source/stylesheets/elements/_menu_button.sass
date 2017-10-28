@@ -1,0 +1,75 @@
+.menu-btn
+  position: fixed
+  color: transparent
+  top: 0
+  right: 0
+  height: rem-calc(60)
+  width: rem-calc(60)
+  cursor: pointer
+  z-index: 1000
+
+  .menu-icon
+    position: relative
+    width: 100%
+    height: 100%
+
+  .menu-icon__bar
+    display: block
+    position: absolute
+    height: 2px
+    width: 40%
+    margin-left: 35%
+    opacity: 1
+    left: 0
+    transition: 0.2s ease-in-out
+    background-color: $c-grey-base
+
+    &:nth-child(1)
+      top: rem-calc(18)
+
+    &:nth-child(2), &:nth-child(3)
+      top: rem-calc(28)
+
+    &:nth-child(4)
+      top: rem-calc(39)
+
+  .nav-open &
+    position: fixed
+
+    .menu-icon__bar
+      background-color: $c-white
+
+    .menu-icon__bar:nth-child(1)
+      top: rem-calc(29)
+      width: 0%
+      left: 25%
+      opacity: 0
+
+    .menu-icon__bar:nth-child(2)
+      transform: rotate(45deg)
+
+    .menu-icon__bar:nth-child(3)
+      transform: rotate(-45deg)
+
+    .menu-icon__bar:nth-child(4)
+      top: rem-calc(29)
+      width: 0%
+      left: 25%
+      opacity: 0
+
+.menu-btn-stage
+  position: fixed
+  height: rem-calc(60)
+  width: rem-calc(40)
+  top: 0
+  right: $section-border-width
+  z-index: 10
+  background-color: $c-white
+  background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1))
+  border-radius: 0 0 0 3px
+
++breakpoint(medium)
+
+  .menu-btn,
+  .menu-btn-stage
+    display: none

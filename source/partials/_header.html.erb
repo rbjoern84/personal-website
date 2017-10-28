@@ -1,6 +1,23 @@
-<% link_to "http://bjoern-richter.com", class: 'logo' do %>
-  <div class="grid-x align-middle">
-    <%= image_tag "bjoern-richter-logo.svg", class: "cell shrink" %>
-    <p class="cell auto text-bold">Björn<span>|</span>Richter<br />Concept/UX/UI<span>|</span>Designer<br />Frontend<span>|</span>Developer</p>
+<div class="grid-x align-middle">
+  <% link_to "http://bjoern-richter.com", class: 'logo cell shrink' do %>
+    <%= image_tag "bjoern-richter-logo.svg" %>
+    <p class="text-bold">Björn<span>|</span>Richter<br />Concept/UX/UI<span>|</span>Designer<br />Frontend<span>|</span>Developer</p>
+  <% end %>
+  <div class="menu-btn">
+    <div class="menu-icon">
+      <span class="menu-icon__bar"></span>
+      <span class="menu-icon__bar"></span>
+      <span class="menu-icon__bar"></span>
+      <span class="menu-icon__bar"></span>
+    </div>
   </div>
-<% end %>
+  <nav class="inpage-nav cell auto">
+    <div class="inpage-nav__container grid-x align-middle">
+      <ul class="cell">
+        <li><%= link_to "About", "#about", class: "scroll-link" %></li>
+        <li><%= link_to "Work", "#work", class: "scroll-link" %></li>
+        <li><%= link_to "Vita", "#vita", class: "scroll-link" %></li>
+      </ul>
+    </div>
+  </nav>
+</div>

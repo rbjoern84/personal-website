@@ -1,0 +1,59 @@
++breakpoint(small down)
+
+  .grid-x > .inpage-nav
+    opacity: 0
+    visibility: hidden
+    position: fixed
+    display: block
+    width: 100vw
+    height: 100vh
+    left: 0
+    top: 0
+    background-color: rgba($c-primary, .9)
+    text-align: center
+    transition: opacity .5s, visibility .5s
+
+  .inpage-nav__container
+    height: 100vh
+
+    li:nth-child(odd) a
+      transform: translateX(-3em)
+
+    li:nth-child(even) a
+      transform: translateX(3em)
+
+    a
+      display: inline-block
+      padding: 1em
+      font-size: $fs-big
+      color: $c-white
+      transition: transform .3s
+
+  .nav-open .grid-x > .inpage-nav
+    opacity: 1
+    visibility: visible
+
+.nav-open .inpage-nav li a
+  transform: none
+
++breakpoint(medium)
+
+  .grid-x > .inpage-nav
+    text-align: right
+
+    li
+      display: inline-block
+
+    a
+      margin-right: 1vw
+      font-size: $fs-small
+      color: $c-grey-muted
+      border: 1px solid transparent
+      border-radius: 0
+      transition: color .3s, border-color .3s, border-radius .8s
+      padding: .3em .8em .4em .8em
+
+      &:hover
+        color: $c-primary
+        border-color: rgba(20, 40, 240, 0.2)
+        border-radius: 2rem
