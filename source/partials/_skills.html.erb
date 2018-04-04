@@ -1,0 +1,91 @@
+<section id="skills" class="p-bottom-0">
+  <div class="grid-container">
+    <div class="grid-x grid-padding-x align-center text-center case-title">
+      <h2 class="cell medium-10">Experience and Skills</h2>
+      <ul class="skills-filter align-center">
+        <li v-for="category in categories" class="skill-filter" v-bind:class="{ active: active === category }">
+          <a href="" v-on:click="selectCategory">{{category}}</a>
+        </li>
+      </ul>
+      <hr>
+      <ul class="skills cell">
+        <li class="skill" v-for="skill in filteredSkills">
+          <span class="skill__name">{{ skill.name }}</span>
+          <div class="skill__progress-bar">
+            <div v-bind:style="{ width: skill.value + '%' }"></div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<script type="text/javascript">
+  var skills = new Vue({
+    el: "#skills",
+    data: {
+      skills: [
+        { category: "Design", name: "Research", value: "15" },
+        { category: "Design", name: "Strategy", value: "20" },
+        { category: "Design", name: "Concept", value: "75" },
+        { category: "Design", name: "Interaction Design", value: "85" },
+        { category: "Design", name: "Visual Interface Design", value: "100" },
+        { category: "Design", name: "Prototyping", value: "75" },
+        { category: "Design", name: "Evaluation", value: "20" },
+        { category: "Design", name: "Corporate Design", value: "50" },
+        { category: "Design", name: "Graphic Design", value: "50" },
+        { category: "Design", name: "Typography", value: "90" },
+        { category: "Design", name: "Workshops", value: "20" },
+        { category: "Development", name: "HTML", value: "80" },
+        { category: "Development", name: "CSS/Sass", value: "100" },
+        { category: "Development", name: "Javascript", value: "35" },
+        { category: "Development", name: "jQuery", value: "50" },
+        { category: "Development", name: "git", value: "90" },
+        { category: "Development", name: "Agile, Scrum, Kanban", value: "80" },
+        { category: "Development", name: "AlchemyCMS", value: "70" },
+        { category: "Development", name: "Ruby on Rails", value: "10" },
+        { category: "Development", name: "Vue.js", value: "15" },
+        { category: "Personal", name: "Communication", value: "90" },
+        { category: "Personal", name: "Teamwork", value: "100" },
+        { category: "Personal", name: "Presentation", value: "60" },
+        { category: "Personal", name: "Moderation", value: "25" },
+        { category: "Personal", name: "Analytical thinking", value: "100" },
+        { category: "Personal", name: "Creative problem solving", value: "100" },
+        { category: "Personal", name: "Structured working", value: "85" },
+        { category: "Personal", name: "Critical ability", value: "95" },
+        { category: "Personal", name: "Reliability", value: "90" },
+      ],
+      active: "Design"
+    },
+    created: function(){
+      console.log(this.active);
+    },
+    methods: {
+      selectCategory: function(e){
+        e.preventDefault();
+        this.active = e.target.innerText;
+        console.log(this.active);
+        return false;
+      }
+    },
+    computed: {
+      categories: function(){
+        var allCategories = [];
+        this.skills.forEach(function(skill){
+          allCategories.push(skill.category);
+        });
+        var uniqueCategories = [];
+        allCategories.forEach(function(category){
+          if($.inArray(category, uniqueCategories) === -1) uniqueCategories.push(category);
+        });
+        return uniqueCategories;
+      },
+      filteredSkills: function(){
+        vm = this;
+        return this.skills.filter(function (skill) {
+          return skill.category === vm.active;
+        });
+      }
+    }
+  })
+</script>

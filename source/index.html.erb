@@ -5,7 +5,7 @@ title: Björn Richter – Product Designer and Frontend Developer
 <div class="selfie">
   <%= image_tag 'selfie.jpg', :alt => "Selfie" %>
 </div>
-<section id="about" class="intro">
+<section id="about" class="intro grid-container">
   <div class="grid-x grid-padding-x align-center">
     <div class="cell medium-10 large-5 text-center large-text-right">
       <h2 class="like-h4 text-grey">Hi, I'm Björn Richter,</h2>
@@ -33,5 +33,6 @@ title: Björn Richter – Product Designer and Frontend Developer
   <%= partial 'partials/cases/insufflator' %>
   <%#= partial 'partials/cases/lemke' %>
 </div>
+<%= partial "partials/skills" %>
 <%= partial "partials/vita" %>
 <%= javascript_include_tag 'slick'  %>
