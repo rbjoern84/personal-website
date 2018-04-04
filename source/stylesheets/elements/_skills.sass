@@ -1,0 +1,76 @@
+.skills
+  width: 100%
+
+  li
+    margin-bottom: $sp-small
+    display: flex
+    align-items: center
+
+  .skill__name
+    text-align: right
+    width: 30%
+    min-width: 8rem
+    margin-right: 1em
+    line-height: $lh-small
+
+  .skill__progress-bar
+    width: 60%
+
+    > div
+      height: rem-calc(10)
+      width: 0
+      background: linear-gradient(to right, $c-grey-light 0, $c-primary 50vw)
+      transition: width .5s
+
+.skills-filter
+  display: flex
+  align-items: center
+  margin-bottom: 0
+  margin-top: $sp-base
+  font-weight: $fw-bold
+
+  li
+    display: block
+    margin: 0 $sp-base
+    position: relative
+    font-size: $fs-medium
+
+    &:after
+      content: ""
+      display: block
+      position: absolute
+      width: 0
+      height: 3px
+      left: 50%
+      transform: translateX(-50%)
+      bottom: -3px
+      background-color: transparent
+      transition: width .3s, background-color .3s
+
+    &.active a
+      color: $c-primary
+
+    &.active:after
+      width: 100%
+      background-color: $c-primary
+
+    &:hover:not(.active):after
+      width: 50%
+      background-color: $c-grey-light
+
+  a
+    display: block
+    padding: .2em 0
+    color: $c-black
+
+    &:hover
+      color: $c-grey-dark
+
+  + hr
+    width: 100%
+    height: 3px
+    border: none
+    background: linear-gradient(to right, rgba(255,255,255,0), $c-grey-xlight, rgba(255,255,255,0))
+    margin-top: 0
+    margin-bottom: $sp-big
+
