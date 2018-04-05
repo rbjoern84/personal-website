@@ -8,21 +8,22 @@ title: Björn Richter – Product Designer and Frontend Developer
 <section id="about" class="intro grid-container">
   <div class="grid-x grid-padding-x align-center">
     <div class="cell medium-10 large-5 text-center large-text-right">
-      <h2 class="like-h4 text-grey">Hi, I'm Björn Richter,</h2>
+      <h2 class="like-h3 text-grey">Hi, I'm Björn Richter,</h2>
       <h1 class="text-primary">UX/UI Designer<br />and Frontend Developer<br />based in Berlin.</h1>
     </div>
     <div class="cell medium-8 large-6">
       <p>
-        Currently I'm working at <%= link_to 'bitspire', 'http://bitspire.de', :target => 'blank' %> in Berlin. As a designer and frontend developer I do conceptual work, user interface design, frontend engineering and templating with the open source rails based AlchemyCMS. <br />
-        I have a bachelor degree in interface design from the <%= link_to 'University of Applied Sciences Potsdam', 'https://fh-potsdam.de', :target => 'blank' %>.<br />
-        In the past I gained experience at <%= link_to 'Edenspiekermann', 'http://edenspiekermann.de', :target => 'blank' %> and several other companies. A brief summary you can find at the bottom.
+        Currently I'm working at <%= link_to 'bitspire', 'http://bitspire.de', target: 'blank', class: "external" %> in Berlin. As a designer and frontend developer I do conceptual work, user interface design, frontend engineering and templating with the open source rails based AlchemyCMS. <br />
+        I have a bachelor degree in interface design from the <%= link_to 'University of Applied Sciences Potsdam', 'https://fh-potsdam.de', target: 'blank', class: "external" %>.<br />
+        In the past I gained experience at <%= link_to 'Edenspiekermann', 'http://edenspiekermann.de', target: 'blank', class: "external" %> and several other companies. See a brief <%= link_to 'summary', '#vita', class: "scroll-link" %> at the bottom.
       </p>
       <p>
-        Besides the impressions of my (older) work below I am/was currently/recently involved in several other e-commerce and web projects for clients like the <strong>brand eins magazine</strong>, <strong>ZDF</strong>, <strong>Finanzenverlag</strong>, <strong>bestmade.co</strong> and some more, as a designer and/or frontend developer.
+        In the recent years I am/was involved in several e-commerce and web projects for clients like the <strong>brand eins magazine</strong>, <strong>ZDF</strong>, <strong>Finanzenverlag</strong>, <strong>bestmade.co</strong> and some more, as a designer and/or frontend developer.
       </p>
     </div>
   </div>
 </section>
+<%= partial "partials/projects" %>
 <div id="work">
   <%= partial 'partials/cases/alchemy' %>
   <%= partial 'partials/cases/senshemp' %>
