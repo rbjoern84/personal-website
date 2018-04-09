@@ -148,10 +148,10 @@ $header-styles: (
   medium: (
     'h1': ('font-size': $fs-large),
     'h2': ('font-size': $fs-big),
-    'h3': ('font-size': $fs-big),
-    'h4': ('font-size': $fs-medium),
-    'h5': ('font-size': $fs-base),
-    'h6': ('font-size': $fs-small),
+    'h3': ('font-size': $fs-medium),
+    'h4': ('font-size': $fs-base),
+    'h5': ('font-size': $fs-small),
+    'h6': ('font-size': $fs-xsmall),
   ),
 );
 // $header-text-rendering: optimizeLegibility;
