@@ -37,6 +37,7 @@
         { category: "Design", name: "Workshops", value: "20" },
         { category: "Development", name: "HTML", value: "80" },
         { category: "Development", name: "CSS/Sass", value: "100" },
+        { category: "Development", name: "Foundation, Bootstrap", value: "70" },
         { category: "Development", name: "Javascript", value: "35" },
         { category: "Development", name: "jQuery", value: "50" },
         { category: "Development", name: "git", value: "90" },
@@ -56,14 +57,10 @@
       ],
       active: "Design"
     },
-    created: function(){
-      console.log(this.active);
-    },
     methods: {
       selectCategory: function(e){
         e.preventDefault();
         this.active = e.target.innerText;
-        console.log(this.active);
         return false;
       }
     },
