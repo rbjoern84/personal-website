@@ -1,0 +1,107 @@
+<section id="projects" class="p-top-0">
+  <div class="grid-container" v-on:click="resetFilter">
+    <div class="grid-x grid-padding-x align-center">
+      <h2 class="cell medium-10 large-6 text-center">Projects I mainly work(ed) on during the last three years</h2>
+      <ul class="projects cell medium-10 large-7">
+        <li class="project" v-for="project in projects" v-bind:class="{ 'muted': !project.active }">
+          <h4 class="project__title">
+            <a class="external" v-bind:href="project.url" v-bind:title="project.url" target="blank"> {{ project.name }}</a>
+            <span class="tags">
+              <template v-for="(tag, index) in project.tags">
+                <span class="tag" v-bind:class="tag.toLowerCase()" v-on:click.stop="filterCategory">{{ tag.toLowerCase() }}</span>
+              </template>
+            </span>
+          </h4>
+          <p class="project__description text-small">{{ project.description }}</p>
+        </li>
+      </ul>
+      <p class="cell medium-9 large-8 text-center text-medium">Besides the “live” projects above there is a couple of other concept and design stuff I did in the past. Here you can see some visual impressions:</p>
+    </div>
+  </div>
+</section>
+
+<script type="text/javascript">
+  var projects = new Vue({
+    el: "#projects",
+    data: {
+      projects: [
+        { name: "brandeins.de",
+          description: "E-commerce and online magazine for the well-known german publisher brand eins, Hamburg, long-term project",
+          url: "http://www.brandeins.de",
+          tags: ["design", "frontend", "cms"],
+          active: true
+        },
+        { name: "bitspire.de",
+          description: "Our company website",
+          url: "http://bitspire.de/en",
+          tags: ["branding", "design", "frontend", "cms", "text"],
+          active: true
+        },
+        { name: "brandguide.zdf.de",
+          description: "Online brand guide for ZDF and its sub brands, technical implementation for the brand agency KNSK Hamburg",
+          url: "http://brandguide.zdf.de",
+          tags: ["frontend", "cms"],
+          active: true
+        },
+        { name: "remax.eu",
+          description: "Global real estate franchising company, technical implementation for the brand agency factor partners Hamburg.",
+          url: "http://remax.eu",
+          tags: ["frontend", "cms"],
+          active: true
+        },
+        { name: "shop.finanzenverlag.de",
+          description: "E-commerce site for the german publisher Finanzenverlag in Munich, known for the magazines „Euro“ and „Börse Online“",
+          url: "https://shop.finanzenverlag.de",
+          tags: ["design", "frontend", "cms"],
+          active: true
+        },
+        { name: "all-pro.hk",
+          description: "German/Asian manufacturer for lamps and electrical installation materials",
+          url: "http://www.all-pro.hk",
+          tags: ["branding", "design", "frontend", "cms"],
+          active: true
+        },
+        { name: "hijabvibe.com",
+          description: "Fashion Website for modern muslimes",
+          url: "http://www.hijabvibe.com",
+          tags: ["branding", "design", "frontend", "cms"],
+          active: true
+        },
+        { name: "operator.cloud",
+          description: "Product landing page for VoIP phone system for the IT agency magic support Hamburg",
+          url: "http://operator.cloud",
+          tags: ["design", "frontend"],
+          active: true
+        }
+      ],
+      filter: "all"
+    },
+    methods: {
+      filterCategory: function(e) {
+        var filter = e.target.className.replace("tag ", "");
+        var allTags = $(".tag");
+        var activeTags = $("."+filter);
+        allTags.removeClass("active");
+        activeTags.addClass("active");
+        projects.filter = filter;
+        projects.projects.forEach(function(project){
+          if (project.tags.includes(filter) || projects.filter === "all" ) {
+            project.active = true;
+          } else {
+            project.active = false;
+          }
+        });
+        return false;
+      },
+      resetFilter: function() {
+        this.filter = "all";
+        var allTags = $(".tag");
+        allTags.removeClass("active");
+        projects.projects.forEach(function(project){
+          project.active = true;
+        });
+        return false;
+      }
+    }
+  })
+</script>

@@ -85,3 +85,69 @@ a.external:after
 
 .text-grey-muted
   color: $c-grey-muted
+
+.text-underlined
+  display: inline
+  border-bottom: .15em solid rgba($c-black, .3)
+  padding-bottom: .15em
+  margin-bottom: .5em
+  line-height: 1.8
+
+.tag
+  padding: .1em .4em
+  text-transform: uppercase
+  letter-spacing: .1em
+  margin: 0 .5em 0 0
+  display: inline-block
+  border-radius: 1px
+  font-size: rem-calc(10)
+  color: $c-grey-base
+  font-weight: $fw-bold
+  border: 1px solid currentcolor
+  vertical-align: middle
+  cursor: pointer
+
+  &.design
+    color: $c-design
+
+    &:hover,
+    &.active
+      background-color: $c-design
+      color: $c-white
+      border-color: $c-design
+
+  &.frontend
+    color: $c-frontend
+
+    &:hover,
+    &.active
+      background-color: $c-frontend
+      color: $c-white
+      border-color: $c-frontend
+
+  &.cms
+    color: $c-cms
+
+    &:hover,
+    &.active
+      background-color: $c-cms
+      color: $c-white
+      border-color: $c-cms
+
+  &.branding
+    color: $c-branding
+
+    &:hover,
+    &.active
+      background-color: $c-branding
+      color: $c-white
+      border-color: $c-branding
+
+  &.text
+    color: $c-text
+
+    &:hover,
+    &.active
+      background-color: $c-text
+      color: $c-white
+      border-color: $c-text

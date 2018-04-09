@@ -1,0 +1,40 @@
+.projects
+  margin-top: $sp-base
+  margin-bottom: $sp-large
+
+.project
+  border-top: 3px solid $c-grey-xlight
+  transition: opacity .3s
+
+  &:first-child
+    border: none
+
+  p
+    transition: opacity .2s, line-height .3s
+
+  &.muted + .project:not(.muted)
+    border-color: scale-color($c-black, $alpha: -98%)
+
+.project__title
+  margin: 1em 0 .5em 0
+
+  > a
+    color: $c-black
+
+.muted
+  opacity: .3
+
+  p
+    line-height: 0
+    opacity: 0
+
++breakpoint(small down)
+
+  .tags
+    display: block
+    margin-top: .2em
+
++breakpoint(medium)
+
+  .tags
+    margin-left: .25em
