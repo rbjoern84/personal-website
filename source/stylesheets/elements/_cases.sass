@@ -43,3 +43,21 @@
 .primary-image img
   width: 100%
   box-shadow: $big-box-shadow
+
+.scroll-image
+  position: relative
+  overflow: hidden
+
+  img
+    transition: transform 1.5s
+    position: absolute
+
+.scroll-image:not(:hover) img
+  transform: translateY(0) !important
+
+.fade-image
+  position: absolute
+  transition: opacity .5s
+
+  &:hover
+    opacity: 0!important

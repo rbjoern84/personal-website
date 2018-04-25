@@ -46,9 +46,9 @@
 // Smartphone
 
 .device.mobile
-  padding: 0 rem-calc(5)
+  padding: 0 .5vw
   background: linear-gradient($c-white, $c-grey-xlight)
-  border-radius: 2.25vw
+  border-radius: 2vw
   width: auto
   margin: $sp-small
   transition: transform .3s .5s
@@ -75,6 +75,11 @@
   background-position: center top
   border: 1px solid $c-grey-light
   border-radius: 2px
+  position: relative
+
+.device--desktop__image
+  min-height: 32vw
+  position: relative
 
 .speaker
   height: 0.4vw
@@ -100,8 +105,8 @@
   transition-delay: .5s
 
   .device--mobile__image
-    width: 14vw
-    height: 24vw
+    width: 12vw
+    height: 20vw
 
 .mobile.left
   left: $sp-base
@@ -123,6 +128,14 @@
 
   .device.desktop.right
     margin-right: 0
+
+  .device--desktop__image
+    min-height: 38vw
+
++breakpoint(small down)
+
+  .device--desktop__image
+    min-height: 42vw
 
 +breakpoint(medium)
 
