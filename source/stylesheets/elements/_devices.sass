@@ -117,6 +117,17 @@
   transform: translateX(200%)
 
 
+// Smarthome Terminal
+
+.device.smarthome
+  border-radius: 15px
+  padding: $sp-medium
+
+.smarthome-image
+  border: 2px solid $c-black
+  border-radius: 3px
+  max-width: 16rem
+
 +breakpoint(medium down)
 
   .device.desktop.left,
@@ -136,6 +147,9 @@
 
   .device--desktop__image
     min-height: 42vw
+
+  .smarthome-image
+    max-width: 60vw
 
 +breakpoint(medium)
 
