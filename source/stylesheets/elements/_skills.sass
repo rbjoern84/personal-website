@@ -54,9 +54,11 @@
       width: 100%
       background-color: $c-primary
 
-    &:hover:not(.active):after
-      width: 50%
-      background-color: $c-grey-light
+    +breakpoint(medium)
+
+      &:hover:not(.active):after
+        width: 50%
+        background-color: $c-grey-light
 
   a
     display: block
