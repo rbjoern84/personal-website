@@ -5,4 +5,5 @@
 // require scroll_events
 //= require navigation
 //= require cases
+//= require date_difference_count
 
