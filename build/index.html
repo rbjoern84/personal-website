@@ -1,0 +1,1085 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Björn Richter is a berlin based UX/UI designer and frontend developer with passion for software interfaces, the web and typography.">
+    <meta name="author" content="Björn Richter">
+    <meta name = "format-detection" content = "telephone=no">
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title>Björn Richter – Interface Designer and Frontend Developer</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <link href="stylesheets/site-2531fffa.css" rel="stylesheet" />
+    <script src="javascripts/site-56a72303.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,600,800" rel="stylesheet">
+  </head>
+  <body class="standard">
+    <header>
+      <div class="grid-x align-middle">
+<a href="http://bjoern-richter.com" class="logo cell shrink">    <img src="images/bjoern-richter-logo-60fcff11.svg" alt="Bjoern richter logo" />
+    <p class="text-bold">Björn<span>|</span>Richter<br />Concept/UX/UI<span>|</span>Designer<br />Frontend<span>|</span>Developer</p>
+</a>  <div class="menu-btn">
+    <div class="menu-icon">
+      <span class="menu-icon__bar"></span>
+      <span class="menu-icon__bar"></span>
+      <span class="menu-icon__bar"></span>
+      <span class="menu-icon__bar"></span>
+    </div>
+  </div>
+  <nav class="inpage-nav cell auto">
+    <div class="inpage-nav__container grid-x align-middle">
+      <ul class="cell">
+        <li><a href="#about" class="scroll-link">About</a></li>
+        <li><a href="#projects" class="scroll-link">Work</a></li>
+        <li><a href="#skills" class="scroll-link">Skills</a></li>
+        <li><a href="#vita" class="scroll-link">Vita</a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+    </header>
+    <main>
+      <div class="menu-btn-stage hide-for-medium"></div>
+<div class="selfie">
+  <img src="images/selfie-f8f1140d.jpg" alt="Selfie" />
+</div>
+<section id="about" class="intro grid-container">
+  <div class="grid-x grid-padding-x align-center">
+    <div class="cell medium-10 large-5 text-center large-text-right">
+      <h2 class="like-h3 text-grey">Hi, I'm Björn Richter,</h2>
+      <h1 class="text-primary">UX/UI designer<br />and frontend developer<br />based in Berlin.</h1>
+    </div>
+    <div class="cell medium-8 large-6">
+      <p>
+        Currently I'm working at <a href="http://solarisbank.com">solarisBank AG</a> in Berlin, bridging UX and tech. As a designer and developer I do conceptual work, user interface design and frontend engineering.<br />
+        I have a bachelor degree in interface design from the <a href="https://fh-potsdam.de" target="blank" class="external">University of Applied Sciences Potsdam</a>.<br />
+        In the past I gained experience in a lot of short and long running projects for bigger and smaller clients at <a href="http://bitspire.de" target="blank" class="external">bitspire</a>, <a href="http://edenspiekermann.de" target="blank" class="external">Edenspiekermann</a> and several other companies. See a brief <a href="#vita" class="scroll-link">summary</a> at the bottom.
+      </p>
+      <p>
+        In the recent years I was involved in several e-commerce and web projects for clients like the <strong>brand eins magazine</strong>, <strong>ZDF</strong>, <strong>Finanzenverlag</strong>, <strong>bestmade.co</strong> and some more, as a designer and/or frontend developer.
+      </p>
+    </div>
+  </div>
+</section>
+<section id="projects" class="p-top-0">
+  <div class="grid-container" v-on:click="resetFilter">
+    <div class="grid-x grid-padding-x align-center">
+      <h2 class="cell medium-10 large-6 text-center">Projects I mainly work(ed) on during the last three years</h2>
+      <ul class="projects cell medium-10 large-7">
+        <li class="project" v-for="project in projects" v-bind:class="{ 'muted': !project.active }">
+          <h4 class="project__title">
+            <a class="external" v-bind:href="project.url" v-bind:title="project.url" target="blank"> {{ project.name }}</a>
+            <span class="tags">
+              <template v-for="(tag, index) in project.tags">
+                <span class="tag" v-bind:class="tag.toLowerCase()" v-on:click.stop="filterCategory">{{ tag.toLowerCase() }}</span>
+              </template>
+            </span>
+          </h4>
+          <p class="project__description text-small">{{ project.description }}</p>
+        </li>
+      </ul>
+      <p class="cell medium-9 large-8 text-center text-medium">Besides the “live” projects above there is a couple of other concept and design stuff I did in the past. Here are some visual impressions:</p>
+    </div>
+  </div>
+</section>
+
+<script type="text/javascript">
+  var projects = new Vue({
+    el: "#projects",
+    data: {
+      projects: [
+        { name: "brandeins.de",
+          description: "E-commerce and online magazine for the well-known german publisher brand eins, Hamburg, long-term project",
+          url: "http://www.brandeins.de",
+          tags: ["design", "frontend", "cms"],
+          active: true
+        },
+        { name: "bitspire.de",
+          description: "Our company website",
+          url: "http://bitspire.de/en",
+          tags: ["branding", "design", "frontend", "cms", "text"],
+          active: true
+        },
+        { name: "brandguide.zdf.de",
+          description: "Online brand guide for ZDF and its sub brands, technical implementation for the brand agency KNSK Hamburg",
+          url: "http://brandguide.zdf.de",
+          tags: ["frontend", "cms"],
+          active: true
+        },
+        { name: "remax.eu",
+          description: "Global real estate franchising company, technical implementation for the brand agency factor partners Hamburg.",
+          url: "http://remax.eu",
+          tags: ["frontend", "cms"],
+          active: true
+        },
+        { name: "shop.finanzenverlag.de",
+          description: "E-commerce site for the german publisher Finanzenverlag in Munich, known for the magazines „Euro“ and „Börse Online“",
+          url: "https://shop.finanzenverlag.de",
+          tags: ["design", "frontend", "cms"],
+          active: true
+        },
+        { name: "all-pro.hk",
+          description: "German/Asian manufacturer for lamps and electrical installation materials",
+          url: "http://www.all-pro.hk",
+          tags: ["branding", "design", "frontend", "cms"],
+          active: true
+        },
+        { name: "hijabvibe.com",
+          description: "Fashion Website for modern muslimes",
+          url: "http://www.hijabvibe.com",
+          tags: ["branding", "design", "frontend", "cms"],
+          active: true
+        },
+        { name: "operator.cloud",
+          description: "Product landing page for VoIP phone system for the IT agency magic support Hamburg",
+          url: "http://operator.cloud",
+          tags: ["design", "frontend"],
+          active: true
+        }
+      ],
+      filter: "all"
+    },
+    methods: {
+      filterCategory: function(e) {
+        var filter = e.target.className.replace("tag ", "");
+        var allTags = $(".tag");
+        var activeTags = $("."+filter);
+        allTags.removeClass("active");
+        activeTags.addClass("active");
+        projects.filter = filter;
+        projects.projects.forEach(function(project){
+          if (project.tags.includes(filter) || projects.filter === "all" ) {
+            project.active = true;
+          } else {
+            project.active = false;
+          }
+        });
+        return false;
+      },
+      resetFilter: function() {
+        this.filter = "all";
+        var allTags = $(".tag");
+        allTags.removeClass("active");
+        projects.projects.forEach(function(project){
+          project.active = true;
+        });
+        return false;
+      }
+    }
+  })
+</script>
+
+<div id="work">
+  <section class="bg-purple-pastel">
+  <div class="grid-container">
+    <div class="grid-x grid-padding-x grid-margin-y align-center text-center case-title">
+      <div class="cell medium-10">
+        <h3 class="text-underlined">Smart home interface</h3>
+      </div>
+    </div>
+    <div class="grid-x grid-padding-x align-center case-pictures">
+      <div class="cell medium-11 large-10">
+        <div class="carousel">
+          <div>
+            <div class="grid-x align-center">
+              <div class="device mobile smarthome cell large-3">
+                <div class="smarthome-image">
+                  <img src="images/smarthome/smarthome-reminder-7873ccc2.png" alt="Smarthome reminder" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="grid-x align-center">
+              <div class="device mobile smarthome cell large-3">
+                <div class="smarthome-image">
+                  <img data-lazy="images/smarthome/smarthome-alert-f4160463.png" alt="smarthome-alert.png">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="grid-x align-center">
+              <div class="device mobile smarthome cell large-3">
+                <div class="smarthome-image">
+                  <img data-lazy="images/smarthome/smarthome-menu-3e3f8eab.png" alt="smarthome-menu.png">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="grid-x align-center">
+              <div class="device mobile smarthome cell large-3">
+                <div class="smarthome-image">
+                  <img data-lazy="images/smarthome/smarthome-scene-edit-4c1a428b.png" alt="smarthome-scene-edit.png">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="grid-x align-center">
+              <div class="device mobile smarthome cell large-3">
+                <div class="smarthome-image">
+                  <img data-lazy="images/smarthome/smarthome-home-7e63e49e.png" alt="smarthome-home.png">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="grid-x align-center">
+              <div class="device mobile smarthome cell large-3">
+                <div class="smarthome-image">
+                  <img data-lazy="images/smarthome/smarthome-temp-39353fc6.png" alt="smarthome-temp.png">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="grid-x grid-padding-x align-center case-info">
+      <div class="cell medium-4 large-3 text-small">
+        <p class="text-small"><small class="text-grey-muted">Context</small><br />2018, Private project</p>
+      </div>
+      <div class="cell medium-8 large-7 text-small">
+        <p class="text-small"><small class="text-grey-muted">Project</small><br />Design of a smart home interface</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="bg-brown-pastel">
+  <div class="grid-container">
+    <div class="grid-x grid-padding-x grid-margin-y align-center text-center case-title">
+      <div class="cell medium-10">
+        <h3 class="text-underlined">Kaia.ch content commerce platform</h3>
+      </div>
+    </div>
+    <div class="grid-x grid-padding-x align-center case-pictures">
+      <div class="cell medium-11 large-10">
+        <div class="carousel">
+          <div>
+            <div class="device desktop">
+              <div class="device--desktop__header clearfix">
+  <div class="bullet bullet--close"></div>
+  <div class="bullet bullet--minimize"></div>
+  <div class="bullet bullet--maximize"></div>
+</div>
+
+              <div class="device--desktop__image scroll-image" style="height: 44vw;">
+                <img data-lazy="images/kaia/kaia1-b62cc6ff.jpg" alt="kaia1.jpg">
+              </div>
+            </div>
+            <hr />
+          </div>
+
+          <div>
+            <div class="device desktop left">
+              <div class="device--desktop__header clearfix">
+  <div class="bullet bullet--close"></div>
+  <div class="bullet bullet--minimize"></div>
+  <div class="bullet bullet--maximize"></div>
+</div>
+
+              <div class="device--desktop__image scroll-image" style="height: 44vw;">
+                <img data-lazy="images/kaia/kaia2-3b4d794d.jpg" alt="kaia2.jpg">
+              </div>
+            </div>
+            <hr />
+            <div class="device mobile right">
+              <div class="device--mobile__header">
+  <div class="speaker"></div>
+</div>
+
+              <div class="device--mobile__image scroll-image">
+                 <img data-lazy="images/kaia/kaia-mobile2-afde6e14.jpg" alt="kaia-mobile2.jpg">
+              </div>
+              <div class="device--mobile__footer">
+  <div class="home-button"></div>
+</div>
+
+            </div>
+          </div>
+
+          <div>
+            <div class="device desktop left">
+              <div class="device--desktop__header clearfix">
+  <div class="bullet bullet--close"></div>
+  <div class="bullet bullet--minimize"></div>
+  <div class="bullet bullet--maximize"></div>
+</div>
+
+              <div class="device--desktop__image" style="height: 32vw;">
+                <img data-lazy="images/kaia/kaia3a-f825d2a1.jpg" alt="kaia3b.jpg" class="fade-image">
+                <img data-lazy="images/kaia/kaia3b-b4539e6a.jpg" alt="kaia3a.jpg">
+              </div>
+            </div>
+            <hr />
+            <div class="device mobile right">
+              <div class="device--mobile__header">
+  <div class="speaker"></div>
+</div>
+
+              <div class="device--mobile__image">
+                <img data-lazy="images/kaia/kaia-mobile3-6f98bedd.jpg" alt="kaia-mobile3.jpg">
+              </div>
+              <div class="device--mobile__footer">
+  <div class="home-button"></div>
+</div>
+
+            </div>
+          </div>
+
+          <div>
+            <div class="device desktop left">
+              <div class="device--desktop__header clearfix">
+  <div class="bullet bullet--close"></div>
+  <div class="bullet bullet--minimize"></div>
+  <div class="bullet bullet--maximize"></div>
+</div>
+
+              <div class="device--desktop__image scroll-image" style="height: 40vw;">
+                <img data-lazy="images/kaia/kaia4-52e8ef19.jpg" alt="kaia4.jpg">
+              </div>
+            </div>
+            <hr />
+            <div class="device mobile right">
+              <div class="device--mobile__header">
+  <div class="speaker"></div>
+</div>
+
+              <div class="device--mobile__image scroll-image">
+                <img data-lazy="images/kaia/kaia-mobile4-6b9c76ab.jpg" alt="kaia-mobile4.jpg">
+              </div>
+              <div class="device--mobile__footer">
+  <div class="home-button"></div>
+</div>
+
+            </div>
+          </div>
+
+          <div>
+            <div class="device desktop">
+              <div class="device--desktop__header clearfix">
+  <div class="bullet bullet--close"></div>
+  <div class="bullet bullet--minimize"></div>
+  <div class="bullet bullet--maximize"></div>
+</div>
+
+              <div class="device--desktop__image scroll-image" style="height: 40vw;">
+                <img data-lazy="images/kaia/kaia5-ece8742b.jpg" alt="kaia5.jpg">
+              </div>
+            </div>
+            <hr />
+          </div>
+
+          <div>
+            <div class="device desktop">
+              <div class="device--desktop__header clearfix">
+  <div class="bullet bullet--close"></div>
+  <div class="bullet bullet--minimize"></div>
+  <div class="bullet bullet--maximize"></div>
+</div>
+
+              <div class="device--desktop__image scroll-image" style="height: 40vw;">
+                <img data-lazy="images/kaia/kaia6-6fa74119.jpg" alt="kaia6.jpg">
+              </div>
+            </div>
+            <hr />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="grid-x grid-padding-x align-center case-info">
+      <div class="cell medium-4 large-3 text-small">
+        <p class="text-small"><small class="text-grey-muted">Context</small><br />2017, bitspire</p>
+      </div>
+      <div class="cell medium-8 large-7 text-small">
+        <p class="text-small"><small class="text-grey-muted">Project</small><br />Product vision, concept, pitch and visual design for the transformation of the Swiss online shop Kaia.ch into a comprehensive content commerce platform</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="bg-grey-pastel">
+  <div class="grid-container">
+    <div class="grid-x grid-padding-x grid-margin-y align-center text-center case-title">
+      <div class="cell medium-10">
+        <h3 class="text-underlined">Alchemy CMS UI redesign and implementation</h3>
+      </div>
+    </div>
+    <div class="grid-x grid-padding-x align-center case-pictures">
+      <div class="cell medium-11 large-10">
+        <div class="carousel">
+          <div>
+            <div class="grid-x align-center align-middle grid-padding-y">
+              <div class="cell small-5 large-4 secondary-image">
+                <img src="images/alchemy/alchemy-pages-1-old-f494272a.jpg" alt="Alchemy pages 1 old" />
+              </div>
+              <div class="cell small-6 large-5 primary-image">
+                <img src="images/alchemy/alchemy-pages-1-new-2262877c.jpg" alt="Alchemy pages 1 new" />
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="grid-x align-center align-middle grid-padding-y">
+              <div class="cell small-6 large-5 primary-image">
+                <img data-lazy="images/alchemy/alchemy-pages-2-new-23fd3050.jpg" alt="alchemy-pages-2-new.jpg">
+              </div>
+              <div class="cell small-5 large-4 secondary-image">
+                <img data-lazy="images/alchemy/alchemy-pages-2-old-1803288c.jpg" alt="alchemy-pages-2-old.jpg">
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="grid-x align-center align-middle grid-padding-y">
+              <div class="cell small-11 medium-9 xlarge-7 secondary-image p-bottom-0">
+                <img data-lazy="images/alchemy/alchemy-elements-2-old-8cf02a6c.jpg" alt="alchemy-elements-2-old.jpg">
+              </div>
+              <div class="cell medium-11 xlarge-9 primary-image p-top-0">
+                <img data-lazy="images/alchemy/alchemy-elements-2-new-f20af38a.jpg" alt="alchemy-elements-2-new.jpg">
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="grid-x align-center align-middle grid-padding-y">
+              <div class="cell small-5 large-4 secondary-image">
+                <img data-lazy="images/alchemy/alchemy-elements-1-old-6294812a.jpg" alt="alchemy-elements-1-old.jpg">
+              </div>
+              <div class="cell small-6 large-5 primary-image">
+                <img data-lazy="images/alchemy/alchemy-elements-1-new-2f21ba2d.jpg" alt="alchemy-elements-1-new.jpg">
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="grid-x align-center align-middle grid-padding-y">
+              <div class="cell small-11 medium-9 xlarge-7 secondary-image p-bottom-0">
+                <img data-lazy="images/alchemy/alchemy-tags-old-502ba84d.jpg" alt="alchemy-tags-old.jpg">
+              </div>
+              <div class="cell medium-11 xlarge-9 primary-image p-top-0">
+                <img data-lazy="images/alchemy/alchemy-tags-new-22bb2fcb.jpg" alt="alchemy-tags-new.jpg">
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="grid-x align-center align-middle grid-padding-y">
+              <div class="cell small-11 medium-9 xlarge-7 secondary-image p-bottom-0">
+                <img data-lazy="images/alchemy/alchemy-pictures-old-fa92757a.jpg" alt="alchemy-pictures-old.jpg">
+              </div>
+              <div class="cell medium-11 xlarge-9 primary-image p-top-0">
+                <img data-lazy="images/alchemy/alchemy-pictures-new-9625472f.jpg" alt="alchemy-pictures-new.jpg">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="grid-x grid-padding-x align-center case-info">
+      <div class="cell medium-4 large-3 text-small">
+        <p class="text-small"><small class="text-grey-muted">Context</small><br />2017, Open Source Contribution</p>
+      </div>
+      <div class="cell medium-8 large-7 text-small">
+        <p class="text-small"><small class="text-grey-muted">Project</small><br />Redesign and implementation of the user interface for the open source Rails based Alchemy CMS including new icons, a modern skin and a couple of usability improvements. See my pull request on <a href="https://github.com/AlchemyCMS/alchemy_cms/pull/1261" target="blank" class="external">github</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="bg-green-pastel">
+  <div class="grid-container">
+    <div class="grid-x grid-padding-x grid-margin-y align-center text-center case-title">
+      <div class="cell medium-10">
+        <h3 class="text-underlined">Senshemp Online Shop</h3>
+      </div>
+    </div>
+    <div class="grid-x grid-padding-x align-center case-pictures">
+      <div class="cell medium-11 large-10">
+        <div class="carousel">
+          <div>
+            <div class="device desktop left">
+              <div class="device--desktop__header clearfix">
+  <div class="bullet bullet--close"></div>
+  <div class="bullet bullet--minimize"></div>
+  <div class="bullet bullet--maximize"></div>
+</div>
+
+              <img src="images/senshemp/senshemp1-1ea01d60.jpg" alt="Senshemp1" />
+            </div>
+            <hr />
+            <div class="device mobile right">
+              <div class="device--mobile__header">
+  <div class="speaker"></div>
+</div>
+
+              <div class="device--mobile__image" style="background-image: url('images/senshemp/senshemp-mobile1-5b24c0d3.jpg')"></div>
+              <div class="device--mobile__footer">
+  <div class="home-button"></div>
+</div>
+
+            </div>
+          </div>
+          <div>
+            <div class="device desktop">
+              <div class="device--desktop__header clearfix">
+  <div class="bullet bullet--close"></div>
+  <div class="bullet bullet--minimize"></div>
+  <div class="bullet bullet--maximize"></div>
+</div>
+
+              <img data-lazy="images/senshemp/senshemp2-f96afc89.jpg" alt="senshemp2.jpg">
+            </div>
+            <hr>
+          </div>
+          <div>
+            <div class="device desktop">
+              <div class="device--desktop__header clearfix">
+  <div class="bullet bullet--close"></div>
+  <div class="bullet bullet--minimize"></div>
+  <div class="bullet bullet--maximize"></div>
+</div>
+
+              <img data-lazy="images/senshemp/senshemp3-4a686a3e.jpg" alt="senshemp3.jpg">
+            </div>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="grid-x grid-padding-x align-center case-info">
+      <div class="cell medium-4 large-3 text-small">
+        <p class="text-small"><small class="text-grey-muted">Context</small><br />2016, bitspire GmbH</p>
+      </div>
+      <div class="cell medium-8 large-7 text-small">
+        <p class="text-small"><small class="text-grey-muted">Project</small><br />Concept and design for a content driven online shop</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="bg-blue-pastel">
+  <div class="grid-container">
+    <div class="grid-x grid-padding-x grid-margin-y align-center text-center case-title">
+      <div class="cell medium-10">
+        <h3 class="text-underlined">freud website with product finder</h3>
+      </div>
+    </div>
+    <div class="grid-x grid-padding-x align-center case-pictures">
+      <div class="cell medium-11 large-10">
+        <div class="carousel">
+          <div>
+            <div class="device desktop left">
+              <div class="device--desktop__header clearfix">
+  <div class="bullet bullet--close"></div>
+  <div class="bullet bullet--minimize"></div>
+  <div class="bullet bullet--maximize"></div>
+</div>
+
+              <img src="images/freud/freud1-39c95feb.jpg" alt="Freud1" />
+            </div>
+            <hr />
+            <div class="device mobile right">
+              <div class="device--mobile__header">
+  <div class="speaker"></div>
+</div>
+
+              <div class="device--mobile__image" style="background-image: url('images/freud/freud-mobile1-cc349404.jpg')"></div>
+              <div class="device--mobile__footer">
+  <div class="home-button"></div>
+</div>
+
+            </div>
+          </div>
+          <div>
+            <div class="device desktop">
+              <div class="device--desktop__header clearfix">
+  <div class="bullet bullet--close"></div>
+  <div class="bullet bullet--minimize"></div>
+  <div class="bullet bullet--maximize"></div>
+</div>
+
+              <img data-lazy="images/freud/freud2-fc1f1cab.jpg", alt="freud2.jpg">
+            </div>
+            <hr />
+          </div>
+          <div>
+            <div class="grid-x align-center">
+              <div class="device mobile cell large-3">
+                <div class="device--mobile__header">
+  <div class="speaker"></div>
+</div>
+
+                <div class="device--mobile__image" style="background-image: url('images/freud/freud-mobile2-a1f24693.jpg')"></div>
+                <div class="device--mobile__footer">
+  <div class="home-button"></div>
+</div>
+
+              </div>
+              <div class="device mobile cell large-3">
+                <div class="device--mobile__header">
+  <div class="speaker"></div>
+</div>
+
+                <div class="device--mobile__image" style="background-image: url('images/freud/freud-mobile3-3f0f33be.jpg')"></div>
+                <div class="device--mobile__footer">
+  <div class="home-button"></div>
+</div>
+
+              </div>
+              <div class="device mobile cell large-3">
+                <div class="device--mobile__header">
+  <div class="speaker"></div>
+</div>
+
+                <div class="device--mobile__image" style="background-image: url('images/freud/freud-mobile4-77c269c7.jpg')"></div>
+                <div class="device--mobile__footer">
+  <div class="home-button"></div>
+</div>
+
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="device desktop right">
+              <div class="device--desktop__header clearfix">
+  <div class="bullet bullet--close"></div>
+  <div class="bullet bullet--minimize"></div>
+  <div class="bullet bullet--maximize"></div>
+</div>
+
+              <img data-lazy="images/freud/freud3-c747c385.jpg", alt="freud3.jpg">
+            </div>
+            <hr />
+            <div class="device mobile left">
+              <div class="device--mobile__header">
+  <div class="speaker"></div>
+</div>
+
+              <div class="device--mobile__image" style="background-image: url('images/freud/freud-mobile8-c9ffe1de.jpg')"></div>
+              <div class="device--mobile__footer">
+  <div class="home-button"></div>
+</div>
+
+            </div>
+          </div>
+          <div>
+            <div class="device desktop left">
+              <div class="device--desktop__header clearfix">
+  <div class="bullet bullet--close"></div>
+  <div class="bullet bullet--minimize"></div>
+  <div class="bullet bullet--maximize"></div>
+</div>
+
+              <img data-lazy="images/freud/freud4-c6f720b4.jpg", alt="freud4.jpg">
+            </div>
+            <hr />
+            <div class="device mobile right">
+              <div class="device--mobile__header">
+  <div class="speaker"></div>
+</div>
+
+              <div class="device--mobile__image" style="background-image: url('images/freud/freud-mobile5-868f985d.jpg')"></div>
+              <div class="device--mobile__footer">
+  <div class="home-button"></div>
+</div>
+
+            </div>
+          </div>
+          <div>
+            <div class="device desktop right">
+              <div class="device--desktop__header clearfix">
+  <div class="bullet bullet--close"></div>
+  <div class="bullet bullet--minimize"></div>
+  <div class="bullet bullet--maximize"></div>
+</div>
+
+              <img data-lazy="images/freud/freud5-a4a73ffd.jpg", alt="freud5.jpg">
+            </div>
+            <hr />
+            <div class="device mobile left">
+              <div class="device--mobile__header">
+  <div class="speaker"></div>
+</div>
+
+              <div class="device--mobile__image" style="background-image: url('images/freud/freud-mobile6-e7ee4cbc.jpg')"></div>
+              <div class="device--mobile__footer">
+  <div class="home-button"></div>
+</div>
+
+            </div>
+          </div>
+          <div>
+            <div class="device desktop left">
+              <div class="device--desktop__header clearfix">
+  <div class="bullet bullet--close"></div>
+  <div class="bullet bullet--minimize"></div>
+  <div class="bullet bullet--maximize"></div>
+</div>
+
+              <img data-lazy="images/freud/freud6-184b9eea.jpg", alt="freud6.jpg">
+            </div>
+            <hr />
+            <div class="device mobile right">
+              <div class="device--mobile__header">
+  <div class="speaker"></div>
+</div>
+
+              <div class="device--mobile__image" style="background-image: url('images/freud/freud-mobile7-91b98057.jpg')"></div>
+              <div class="device--mobile__footer">
+  <div class="home-button"></div>
+</div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="grid-x grid-padding-x align-center case-info">
+      <div class="cell medium-4 large-3 text-small">
+        <p class="text-small"><small class="text-grey-muted">Context</small><br />2014, Edenspiekermann</p>
+      </div>
+      <div class="cell medium-8 large-7 text-small">
+        <p class="text-small"><small class="text-grey-muted">Project</small><br />Concept, design and html prototype for a new corporate website including a product finder</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="bg-purple-pastel">
+  <div class="grid-container">
+    <div class="grid-x grid-padding-x grid-margin-y align-center text-center case-title">
+      <div class="cell medium-10">
+        <h3 class="text-underlined">Majestic Casual app</h3>
+      </div>
+    </div>
+    <div class="grid-x grid-padding-x align-center case-pictures">
+      <div class="cell medium-11 large-10">
+        <div class="carousel">
+          <div>
+            <div class="grid-x align-center">
+              <div class="device mobile cell large-3">
+                <div class="device--mobile__header">
+  <div class="speaker"></div>
+</div>
+
+                <div class="device--mobile__image" style="background-image: url('images/majestic/majestic-0-12ea159f.jpg')"></div>
+                <div class="device--mobile__footer">
+  <div class="home-button"></div>
+</div>
+
+              </div>
+              <div class="device mobile cell large-3">
+                <div class="device--mobile__header">
+  <div class="speaker"></div>
+</div>
+
+                <div class="device--mobile__image" style="background-image: url('images/majestic/majestic-1-b526c08f.jpg')"></div>
+                <div class="device--mobile__footer">
+  <div class="home-button"></div>
+</div>
+
+              </div>
+              <div class="device mobile cell large-3">
+                <div class="device--mobile__header">
+  <div class="speaker"></div>
+</div>
+
+                <div class="device--mobile__image" style="background-image: url('images/majestic/majestic-2-0ed323e0.jpg')"></div>
+                <div class="device--mobile__footer">
+  <div class="home-button"></div>
+</div>
+
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="grid-x align-center">
+              <div class="device mobile cell large-3">
+                <div class="device--mobile__header">
+  <div class="speaker"></div>
+</div>
+
+                <div class="device--mobile__image" style="background-image: url('images/majestic/majestic-3-774105f8.jpg')"></div>
+                <div class="device--mobile__footer">
+  <div class="home-button"></div>
+</div>
+
+              </div>
+              <div class="device mobile cell large-3">
+                <div class="device--mobile__header">
+  <div class="speaker"></div>
+</div>
+
+                <div class="device--mobile__image" style="background-image: url('images/majestic/majestic-4-5759e402.jpg')"></div>
+                <div class="device--mobile__footer">
+  <div class="home-button"></div>
+</div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="grid-x grid-padding-x align-center case-info">
+      <div class="cell medium-4 large-3 text-small">
+        <p class="text-small"><small class="text-grey-muted">Context</small><br />2014, Edenspiekermann</p>
+      </div>
+      <div class="cell medium-8 large-7 text-small">
+        <p class="text-small"><small class="text-grey-muted">Project</small><br />Visual interface design for a music player app</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="bg-brown-pastel">
+  <div class="grid-container">
+    <div class="grid-x grid-padding-x grid-margin-y align-center text-center case-title">
+      <div class="cell medium-10">
+        <h3 class="text-underlined">Typographic book</h3>
+      </div>
+    </div>
+    <div class="grid-x grid-padding-x align-center case-pictures">
+      <div class="cell medium-11 large-10">
+        <div class="carousel">
+          <div><img src="images/typo/typo-title-c1cd62a0.jpg" alt="Typo title" /></div>
+          <div><img data-lazy="images/typo/typo-01-698771d8.jpg", alt="typo-01.jpg"></div>
+          <div><img data-lazy="images/typo/typo-02-2dc61624.jpg", alt="typo-02.jpg"></div>
+          <div><img data-lazy="images/typo/typo-03-2e9f175a.jpg", alt="typo-03.jpg"></div>
+          <div><img data-lazy="images/typo/typo-04-a0232d12.jpg", alt="typo-04.jpg"></div>
+          <div><img data-lazy="images/typo/typo-05-5b88ad6b.jpg", alt="typo-05.jpg"></div>
+          <div><img data-lazy="images/typo/typo-06-fc49483c.jpg", alt="typo-06.jpg"></div>
+          <div><img data-lazy="images/typo/typo-07-53fdee37.jpg", alt="typo-07.jpg"></div>
+          <div><img data-lazy="images/typo/typo-08-9b2370bb.jpg", alt="typo-08.jpg"></div>
+          <div><img data-lazy="images/typo/typo-09-ab58363a.jpg", alt="typo-09.jpg"></div>
+          <div><img data-lazy="images/typo/typo-10-fa8fef7e.jpg", alt="typo-10.jpg"></div>
+          <div><img data-lazy="images/typo/typo-11-e8b1a7d1.jpg", alt="typo-11.jpg"></div>
+          <div><img data-lazy="images/typo/typo-12-0c44b851.jpg", alt="typo-12.jpg"></div>
+          <div><img data-lazy="images/typo/typo-13-c167e809.jpg", alt="typo-13.jpg"></div>
+          <div><img data-lazy="images/typo/typo-14-add2721a.jpg", alt="typo-14.jpg"></div>
+          <div><img data-lazy="images/typo/typo-15-28a349f2.jpg", alt="typo-15.jpg"></div>
+          <div><img data-lazy="images/typo/typo-16-c8846578.jpg", alt="typo-16.jpg"></div>
+        </div>
+      </div>
+    </div>
+    <div class="grid-x grid-padding-x align-center case-info">
+      <div class="cell medium-4 large-3 text-small">
+        <p class="text-small"><small class="text-grey-muted">Context</small><br />2013, Study project</p>
+      </div>
+      <div class="cell medium-8 large-7 text-small">
+        <p class="text-small"><small class="text-grey-muted">Project</small><br />An extract of my typographic exploration</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="bg-blue-pastel">
+  <div class="grid-container">
+    <div class="grid-x grid-padding-x grid-margin-y align-center text-center case-title">
+      <div class="cell medium-10 ">
+        <h3 class="text-underlined">UI design for a medical device</h3>
+      </div>
+    </div>
+    <div class="grid-x grid-padding-x align-center case-pictures">
+      <div class="cell medium-11 large-10">
+        <div class="carousel">
+          <div><img src="images/insufflator/insufflator-03-489684e8.png" alt="Insufflator 03" /></div>
+          <div><img data-lazy="images/insufflator/insufflator-01-f6fd6f49.png", alt="insufflator-02"></div>
+          <div><img data-lazy="images/insufflator/insufflator-02-6a8264be.png", alt="insufflator-03"></div>
+        </div>
+      </div>
+    </div>
+    <div class="grid-x grid-padding-x align-center case-info">
+      <div class="cell medium-4 large-3 text-small">
+        <p class="text-small"><small class="text-grey-muted">Context</small><br />2013, World of Medicine GmbH</p>
+      </div>
+      <div class="cell medium-8 large-7 text-small">
+        <p class="text-small"><small class="text-grey-muted">Project</small><br />Interface design for a multi-indication pump for minimally inversive surgery</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
+<section id="skills" class="p-bottom-0">
+  <div class="grid-container">
+    <div class="grid-x grid-padding-x align-center text-center">
+      <h2 class="cell medium-10">Experience and Skills</h2>
+      <ul class="skills-filter align-center">
+        <li v-for="category in categories" class="skill-filter" v-bind:class="{ active: active === category }">
+          <a href="" v-on:click="selectCategory">{{category}}</a>
+        </li>
+      </ul>
+      <hr>
+      <ul class="skills cell">
+        <li class="skill" v-for="skill in filteredSkills">
+          <span class="skill__name">{{ skill.name }}</span>
+          <div class="skill__progress-bar">
+            <div v-bind:style="{ width: skill.value + '%' }"></div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<script type="text/javascript">
+  var skills = new Vue({
+    el: "#skills",
+    data: {
+      skills: [
+        { category: "Design", name: "Research", value: "15" },
+        { category: "Design", name: "Strategy", value: "20" },
+        { category: "Design", name: "Concept", value: "75" },
+        { category: "Design", name: "Interaction Design", value: "85" },
+        { category: "Design", name: "Visual Interface Design", value: "100" },
+        { category: "Design", name: "Evaluation", value: "20" },
+        { category: "Design", name: "Corporate Design", value: "50" },
+        { category: "Design", name: "Graphic Design", value: "50" },
+        { category: "Design", name: "Typography", value: "90" },
+        { category: "Design", name: "Workshops", value: "20" },
+        { category: "Development", name: "HTML", value: "80" },
+        { category: "Development", name: "CSS/Sass", value: "100" },
+        { category: "Development", name: "Foundation, Bootstrap", value: "70" },
+        { category: "Development", name: "Javascript", value: "35" },
+        { category: "Development", name: "jQuery", value: "50" },
+        { category: "Development", name: "git", value: "90" },
+        { category: "Development", name: "Agile, Scrum, Kanban", value: "80" },
+        { category: "Development", name: "AlchemyCMS", value: "70" },
+        { category: "Development", name: "Ruby on Rails", value: "10" },
+        { category: "Development", name: "Vue.js", value: "15" },
+        { category: "Personal", name: "Communication", value: "90" },
+        { category: "Personal", name: "Teamwork", value: "100" },
+        { category: "Personal", name: "Presentation", value: "60" },
+        { category: "Personal", name: "Moderation", value: "25" },
+        { category: "Personal", name: "Analytical thinking", value: "100" },
+        { category: "Personal", name: "Creative problem solving", value: "100" },
+        { category: "Personal", name: "Structured working", value: "85" },
+        { category: "Personal", name: "Critical ability", value: "95" },
+        { category: "Personal", name: "Reliability", value: "90" },
+      ],
+      active: "Design"
+    },
+    methods: {
+      selectCategory: function(e){
+        e.preventDefault();
+        this.active = e.target.innerText;
+        return false;
+      }
+    },
+    computed: {
+      categories: function(){
+        var allCategories = [];
+        this.skills.forEach(function(skill){
+          allCategories.push(skill.category);
+        });
+        var uniqueCategories = [];
+        allCategories.forEach(function(category){
+          if($.inArray(category, uniqueCategories) === -1) uniqueCategories.push(category);
+        });
+        return uniqueCategories;
+      },
+      filteredSkills: function(){
+        vm = this;
+        return this.skills.filter(function (skill) {
+          return skill.category === vm.active;
+        });
+      }
+    }
+  })
+</script>
+
+<section id="vita" class="vita">
+  <div class="grid-container">
+    <div class="grid-x grid-padding-x align-center">
+      <div class="cell medium-6 large-5">
+        <ul>
+          <h2>Work</h2>
+          <li>
+            <hr>
+            <p class="timespan"><span class="text-small text-caps">06/2018</span><span class="text-small"> – Today</span> <span class="text-xsmall text-grey dynamic-date-span" data-startdate="2018, 5, 1">(3 years)</span></p>
+            <h5 class="text-primary">Senior Designer & Frontend Developer</h5>
+            <p class="text-small">Concept, UX, UI, frontend development<br /><strong><a href="http://solarisbank.com" target="blank" class="text-grey external">@ solarisBank AG, Berlin</a></strong></p>
+          </li>
+          <li>
+            <hr>
+            <p class="timespan"><span class="text-small text-caps">04/2015 – 05/2018</span> <span class="text-xsmall text-grey">(3 years)</span></p>
+            <h5 class="text-primary">Designer & Frontend Developer</h5>
+            <p class="text-small">Concept, UX, UI, frontend development, CMS templating<br /><strong><a href="http://bitspire.de" target="blank" class="text-grey external">@ bitspire, Berlin</a></strong></p>
+          </li>
+          <li>
+            <hr>
+            <p class="timespan"><span class="text-small text-caps">04/2014 – 09/2014</span> <span class="text-xsmall text-grey">(6 months)</span></p>
+            <h5 class="text-primary">Design Intern</h5>
+            <p class="text-small">Concept, UX, UI, frontend development<br /><strong><a href="http://www.edenspiekermann.com" target="blank" class="text-grey external">@ Edenspiekermann AG, Berlin</a></strong></p>
+          </li>
+          <li>
+            <hr>
+            <p class="timespan"><span class="text-small text-caps">07/2010 – 03/2014</span> <span class="text-xsmall text-grey">(4 years)</span></p>
+            <h5 class="text-primary">Interface Designer (part-time)</h5>
+            <p class="text-small">Interface design for medical devices, webdesign, communication design<br /><strong class="text-grey">@ World of Medicine GmbH, Berlin</strong></p>
+          </li>
+          <li>
+            <hr>
+            <p class="timespan"><span class="text-small text-caps">11/2007 – 02/2010</span> <span class="text-xsmall text-grey">(3 years)</span></p>
+            <h5 class="text-primary">Graphic Designer + Final Artist</h5>
+            <p class="text-small">Packaging design, communication design and final art for computer games<br /><strong class="text-grey">@ dtp entertainment AG, Hamburg</strong></p>
+          </li>
+          <li>
+            <hr>
+            <p class="timespan"><span class="text-small text-caps">07/2007 – 10/2007</span> <span class="text-xsmall text-grey">(4 months)</span></p>
+            <h5 class="text-primary">Media Designer/Operator</h5>
+            <p class="text-small">Print design, print production<br /><strong class="text-grey">@ Nordbahn gGmbH – Printery</strong></p>
+          </li>
+        </ul>
+        <br />
+      </div>
+      <div class="cell medium-6 large-5">
+        <ul class="cell medium-6 large-5">
+          <h2>Education</h2>
+          <li>
+            <hr>
+            <p class="timespan"><span class="text-small text-caps">12/2010 – 04/2015</span></p>
+            <h5 class="text-primary">Bachelor of Arts – Interface Design</h5>
+            <p class="text-small"><strong><a href="http://www.fh-potsdam.de" target="blank" class="text-grey external">@ University of Applied Sciences Potsdam</a></strong></p>
+          </li>
+          <li>
+            <hr>
+            <p class="timespan"><span class="text-small text-caps">04/2010 – 07/2010</span></p>
+            <h5 class="text-primary">Training Digital Design</h5>
+            <p class="text-small">HTML, CSS, Flash, AfterEffects<br />
+            <strong><a href="http://cimdata.de" target="blank" class="text-grey external">@ Cimdata Media Academy Berlin</a></strong></p>
+          </li>
+          <li>
+            <hr>
+            <p class="timespan"><span class="text-small text-caps">04/2004 – 07/2007</span></p>
+            <h5 class="text-primary">Media Designer – Digital + Print (IHK)</h5>
+            <p class="text-small">Nordbahn gGmbH<br />Print design + print production<br />
+            <strong><a href="http://www.ernst-litfass-schule.de" target="blank" class="text-grey external">@ OSZ Druck- und Medientechnik, Berlin</a></strong></p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="javascripts/slick-e2df2082.js"></script>
+
+    </main>
+    <footer>
+      <ul class="social-links">
+  <li class="linkedin"><a href="https://www.linkedin.com/in/bj%C3%B6rn-richter-799899125" target="blank" title="Find me on Linkedin">Find me on Linkedin</a></li>
+  <li class="xing"><a href="https://www.xing.com/profile/Bjoern_Richter14" target="blank" title="Find me on Xing">Find me on xing</a></li>
+  <li class="github"><a href="https://github.com/rbjoern84" target="blank" title="Find me on github">Find me on github</a></li>
+</ul>
+<p class="text-small text-center">
+  Last update: August 16, 2018
+  <span class="text-grey-muted"> / </span>
+  <a href="/imprint.html">Imprint</a>
+</p>
+
+
+    </footer>
+  </body>
+</html>

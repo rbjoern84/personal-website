@@ -1,0 +1,1 @@
+$(document).ready(function(){function n(n){var e=n.find(".scroll-image");e.length>0&&(console.log("yes"),e.each(function(){var n=$(this).children().height(),e=$(this).height(),o=-1*(n-e);$(this).children().css("transform","translateY("+o+"px)")}))}$(".carousel").one("mouseover",function(){n($(this))}),$(".carousel").on("beforeChange",function(){n($(this))})});
