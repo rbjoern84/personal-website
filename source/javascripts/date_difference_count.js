@@ -3,14 +3,42 @@ $(document).ready(function() {
   var element = $(".dynamic-date-span");
   var startdate = new Date(element.data("startdate"));
   var now = new Date();
-  element.text("(" + monthDiff(startdate, now) + " months)");
 
-  function monthDiff(d1, d2) {
+  function monthDiff(start, end) {
     var months;
-    months = (d2.getFullYear() - d1.getFullYear()) * 12;
-    months -= d1.getMonth() + 1;
-    months += d2.getMonth();
-    return now.getMonth() <= 0 ? months : months + 1
+    var years = "";
+    var separator = ""
+    months = (end.getFullYear() - start.getFullYear()) * 12;
+    months -= start.getMonth();
+    months += end.getMonth();
+    now.getDate() >= 15 ? months ++ : months = months;
+
+    separator = months > 12 ? ", " : "";
+
+    if (months >= 12) {
+      years = Math.floor(months / 12);
+      months = months - (years * 12);
+    }
+
+    if (years === 1) {
+      years = years + " year";
+    } else if (years > 1) {
+      years = years + " years";
+    } else {
+      year = "";
+    }
+
+    if (months === 1) {
+      months = months + " month";
+    } else if (months > 1) {
+      months = months + " months";
+    } else {
+      months = "";
+    }
+
+    return "(" + years + separator + months + ")";
   }
+
+  element.text(monthDiff(startdate, now));
 
 });
