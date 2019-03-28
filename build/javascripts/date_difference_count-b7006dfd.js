@@ -1,1 +1,0 @@
-$(document).ready(function(){function t(t,e){var a;return a=12*(e.getFullYear()-t.getFullYear()),a-=t.getMonth()+1,a+=e.getMonth(),n.getMonth()<=0?a:a+1}var e=$(".dynamic-date-span"),a=new Date(e.data("startdate")),n=new Date;e.text("("+t(a,n)+" months)")});
