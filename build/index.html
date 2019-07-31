@@ -10,7 +10,7 @@
     <!-- Use the title from a page's frontmatter if it has one -->
     <title>Björn Richter – Interface Designer and Frontend Developer</title>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
-    <link href="stylesheets/site-c4709c4c.css" rel="stylesheet" />
+    <link href="stylesheets/site-7a2b8f6d.css" rel="stylesheet" />
     <script src="javascripts/site-51126972.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,600,800" rel="stylesheet">
   </head>
@@ -53,7 +53,7 @@
     </div>
     <div class="cell medium-8 large-6">
       <p>
-        Currently I'm working at <a href="http://solarisbank.com" target="blank" class="external">solarisBank AG</a> in the <a href="https://www.solarisbank.com/en/services/blockchain" target="blank" class="external">Blockchain Factory</a> team. As a designer and developer I'm responsible for the concept, design and implementation of the frontend for a new financial service/product.<br />
+        Currently I'm working at <a href="http://solarisbank.com" target="blank" class="external">solarisBank</a> in the <a href="https://www.solarisbank.com/en/services/blockchain" target="blank" class="external">Blockchain Factory</a> team. As a designer and frontend developer I'm working on the concept, design and implementation of user interfaces for new financial services, especially in the field of crypto currencies.<br />
         In the past I gained experience in a lot of short and long running projects for bigger and smaller clients at <a href="http://bitspire.de" target="blank" class="external">bitspire</a>, <a href="http://edenspiekermann.de" target="blank" class="external">Edenspiekermann</a> and several other companies. I have a Bachelor's degree in Interface Design from the <a href="https://fh-potsdam.de" target="blank" class="external">University of Applied Sciences Potsdam</a>.<br />My full <a href="#cv" class="scroll-link">CV</a> can be found at the bottom at the bottom.
       </p>
     </div>
@@ -62,7 +62,7 @@
 <section id="projects" class="p-top-0">
   <div class="grid-container" v-on:click="resetFilter">
     <div class="grid-x grid-padding-x align-center">
-      <h2 class="cell medium-10 large-6 text-center">Projects I mainly worked on during the last three to four years</h2>
+      <h2 class="cell medium-10 large-6 text-center">Some of the projects I've worked on during the last years</h2>
       <ul class="projects cell medium-10 large-7">
         <li class="project" v-for="project in projects" v-bind:class="{ 'muted': !project.active }">
           <h4 class="project__title">
@@ -73,7 +73,7 @@
               </template>
             </span>
           </h4>
-          <p class="project__description text-small">{{ project.description }}</p>
+          <p class="project__description text-small">{{ project.description }} <small>({{ project.timespan }})</small></p>
         </li>
       </ul>
       <p class="cell medium-9 large-8 text-center text-medium">Besides from that there is a couple of other design stuff I did in the past. Here are some visual impressions:</p>
@@ -90,48 +90,42 @@
           description: "E-commerce and online magazine for the well-known german publisher brand eins, Hamburg, long-term project",
           url: "http://www.brandeins.de",
           tags: ["design", "frontend", "cms"],
-          active: true
-        },
-        { name: "bitspire.de",
-          description: "Company website",
-          url: "http://bitspire.de/en",
-          tags: ["branding", "design", "frontend", "cms", "text"],
-          active: true
-        },
-        { name: "brandguide.zdf.de",
-          description: "Online brand guide for ZDF and its sub brands, technical implementation for the brand agency KNSK Hamburg",
-          url: "http://brandguide.zdf.de",
-          tags: ["frontend", "cms"],
+          timespan: "2015–2018",
           active: true
         },
         { name: "remax.eu",
           description: "Global real estate franchising company, technical implementation for the brand agency factor partners Hamburg.",
           url: "http://remax.eu",
           tags: ["frontend", "cms"],
+          timespan: "2017–2018",
           active: true
         },
         { name: "shop.finanzenverlag.de",
           description: "E-commerce site for the german publisher Finanzenverlag in Munich, known for the magazines „Euro“ and „Börse Online“",
           url: "https://shop.finanzenverlag.de",
           tags: ["design", "frontend", "cms"],
+          timespan: "2016–2017",
           active: true
         },
-        { name: "all-pro.hk",
-          description: "German/Asian manufacturer for lamps and electrical installation materials",
-          url: "http://www.all-pro.hk",
-          tags: ["branding", "design", "frontend", "cms"],
+        { name: "brandguide.zdf.de",
+          description: "Online brand guide for ZDF and its sub brands, technical implementation for the brand agency KNSK Hamburg",
+          url: "http://brandguide.zdf.de",
+          tags: ["frontend", "cms"],
+          timespan: "2016–2017",
           active: true
         },
         { name: "hijabvibe.com",
           description: "Fashion Website for modern muslimes",
           url: "http://www.hijabvibe.com",
           tags: ["branding", "design", "frontend", "cms"],
+          timespan: "2017",
           active: true
         },
         { name: "operator.cloud",
           description: "Product landing page for VoIP phone system for the IT agency magic support Hamburg",
           url: "http://operator.cloud",
           tags: ["design", "frontend"],
+          timespan: "2016",
           active: true
         }
       ],
@@ -926,32 +920,41 @@
     data: {
       skills: [
         { category: "Design", name: "Visual Interface Design", value: "100" },
-        { category: "Design", name: "Typography and Layout", value: "90" },
+        { category: "Design", name: "Typography and Layout", value: "95" },
         { category: "Design", name: "Interaction Design", value: "85" },
         { category: "Design", name: "UX Conception", value: "75" },
         { category: "Design", name: "Design Systems", value: "50" },
         { category: "Design", name: "User-Testing and Research", value: "45" },
         { category: "Design", name: "Corporate Design", value: "40" },
         { category: "Design", name: "Graphic Design", value: "35" },
-        { category: "Development", name: "CSS/Sass", value: "100" },
-        { category: "Development", name: "HTML", value: "80" },
-        { category: "Development", name: "Agile, Scrum, Kanban", value: "75" },
-        { category: "Development", name: "git", value: "70" },
-        { category: "Development", name: "AlchemyCMS", value: "55" },
-        { category: "Development", name: "jQuery", value: "50" },
-        { category: "Development", name: "JavaScript", value: "45" },
-        { category: "Development", name: "React", value: "25" },
-        { category: "Development", name: "Ruby on Rails", value: "8" },
-        { category: "Others", name: "Passion", value: "100" },
-        { category: "Others", name: "Teamwork", value: "100" },
-        { category: "Others", name: "Analytical thinking", value: "100" },
-        { category: "Others", name: "Structured working", value: "95" },
-        { category: "Others", name: "Reliability", value: "90" },
-        { category: "Others", name: "Creative problem solving", value: "85" },
-        { category: "Others", name: "Communication", value: "80" },
-        { category: "Others", name: "Self reflection", value: "75" },
-        { category: "Others", name: "Presentation", value: "60" },
-        { category: "Others", name: "Meeting facilitation", value: "30" },
+        { category: "DEV", name: "CSS/Sass", value: "100" },
+        { category: "DEV", name: "HTML", value: "90" },
+        { category: "DEV", name: "Agile, Scrum, Kanban", value: "75" },
+        { category: "DEV", name: "git", value: "70" },
+        { category: "DEV", name: "AlchemyCMS", value: "55" },
+        { category: "DEV", name: "JavaScript", value: "50" },
+        { category: "DEV", name: "jQuery", value: "45" },
+        { category: "DEV", name: "React", value: "40" },
+        { category: "DEV", name: "Redux", value: "20" },
+        { category: "DEV", name: "Vue", value: "8" },
+        { category: "DEV", name: "Ruby on Rails", value: "8" },
+        { category: "Personal", name: "Passion", value: "100" },
+        { category: "Personal", name: "Teamwork", value: "100" },
+        { category: "Personal", name: "Analytical thinking", value: "100" },
+        { category: "Personal", name: "Structured working", value: "95" },
+        { category: "Personal", name: "Reliability", value: "90" },
+        { category: "Personal", name: "Creative problem solving", value: "85" },
+        { category: "Personal", name: "Communication", value: "80" },
+        { category: "Personal", name: "Self reflection", value: "75" },
+        { category: "Personal", name: "Presentation", value: "65" },
+        { category: "Industry", name: "eCommerce", value: "85" },
+        { category: "Industry", name: "Editorial", value: "75" },
+        { category: "Industry", name: "Finance", value: "60" },
+        { category: "Industry", name: "Blockchain/Crypto", value: "55" },
+        { category: "Industry", name: "Brand Development", value: "50" },
+        { category: "Industry", name: "Marketing/Advertising", value: "45" },
+        { category: "Industry", name: "Medical Technology", value: "35" },
+        { category: "Industry", name: "Computer Games", value: "15" },
       ],
       active: "Design"
     },
@@ -1068,7 +1071,7 @@
   <li class="github"><a href="https://github.com/rbjoern84" target="blank" title="Find me on github">Find me on github</a></li>
 </ul>
 <p class="text-small text-center">
-  Last update: March 29, 2019
+  Last update: July 31, 2019
   <span class="text-grey-muted"> / </span>
   <a href="/imprint.html">Imprint</a>
 </p>
