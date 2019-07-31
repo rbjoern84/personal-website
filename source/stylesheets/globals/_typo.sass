@@ -34,23 +34,6 @@ p, li
   text-decoration: none
   color: $c-black
 
-p a,
-h4 a
-  transition: box-shadow .2s, background-color .2s, transform .5s, border-radius .4s, color .3s
-  display: inline-block
-  border-radius: 0 200% 0 0
-
-  &:hover
-    color: $c-primary
-    box-shadow: 0 0 60px 20px $c-link-hover-bg
-    padding: 2px 8px
-    margin: -2px -8px
-    transform: translateY(-1px)
-    position: relative
-    z-index: 1000
-    background-color: $c-white
-    border-radius: 0
-
 a.external:after
   content: "\2197"
   font-size: 1.3ex
@@ -154,3 +137,22 @@ a.external:after
       background-color: $c-text
       color: $c-white
       border-color: $c-text
+
++breakpoint(medium)
+
+  p a,
+  h4 a
+    transition: box-shadow .2s, background-color .2s, transform .5s, border-radius .4s, color .3s
+    display: inline-block
+    border-radius: 0 200% 0 0
+
+    &:hover
+      color: $c-primary
+      box-shadow: 0 0 60px 20px $c-link-hover-bg
+      padding: 2px 8px
+      margin: -2px -8px
+      transform: translateY(-1px)
+      position: relative
+      z-index: 1000
+      background-color: $c-white
+      border-radius: 0
