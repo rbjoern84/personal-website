@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Björn Richter is a berlin based UX/UI designer and frontend developer with passion for software interfaces, the web and typography.">
+    <meta name="description" content="Björn Richter is a berlin based UX/UI designer and frontend engineer with passion for software interfaces, the web and typography.">
     <meta name="author" content="Björn Richter">
     <meta name = "format-detection" content = "telephone=no">
     <!-- Use the title from a page's frontmatter if it has one -->
@@ -18,7 +18,7 @@
     <header>
       <div class="grid-x align-middle">
 <a href="http://bjoern-richter.com" class="logo cell shrink">    <img src="images/bjoern-richter-logo-60fcff11.svg" alt="Bjoern richter logo" />
-    <p class="text-bold">Björn<span>|</span>Richter<br />Full<span>|</span>Stack<span>|</span>Designer<br />Frontend<span>|</span>Developer</p>
+    <p class="text-bold">Björn<span>|</span>Richter<br />Full<span>|</span>Stack<span>|</span>Designer<br />Frontend<span>|</span>Engineer</p>
 </a>  <div class="menu-btn">
     <div class="menu-icon">
       <span class="menu-icon__bar"></span>
@@ -49,12 +49,12 @@
   <div class="grid-x grid-padding-x align-center">
     <div class="cell medium-10 large-5 text-center large-text-right">
       <h2 class="like-h3 text-grey">Hi, I’m Björn Richter,</h2>
-      <h1 class="text-primary">Full Stack Designer and Frontend Developer based in Berlin.</h1>
+      <h1 class="text-primary">Full Stack Designer and Frontend Engineer based in Berlin.</h1>
     </div>
     <div class="cell medium-8 large-6">
       <p>
-        Currently I’m working at <a href="http://solarisbank.com" target="blank" class="external">solarisBank</a> in the <a href="https://www.solarisbank.com/en/services/blockchain" target="blank" class="external">Blockchain Factory</a> team. As a designer and frontend developer I’m working on the concept, design and implementation of user interfaces for new financial services, especially in the field of crypto currencies.<br />
-        In the past I gained experience in a lot of short and long running projects for bigger and smaller clients at <a href="http://bitspire.de" target="blank" class="external">bitspire</a>, <a href="http://edenspiekermann.de" target="blank" class="external">Edenspiekermann</a> and several other companies. I have a Bachelor’s degree in Interface Design from the <a href="https://fh-potsdam.de" target="blank" class="external">University of Applied Sciences Potsdam</a>.<br />My full <a href="#cv" class="scroll-link">CV</a> can be found at the bottom at the bottom.
+        Currently I’m working at <a href="http://solarisbank.com" target="blank" class="external">Solarisbank AG</a>, a German fintech providing banking as a service. As a designer and frontend engineer I’m working on the design and implementation of the Solarisbank backoffice – the internal key tool for all kind of banking operations.<br />
+        In the past I gained experience in a lot of short and long running projects for bigger and smaller clients at <a href="http://bitspire.de" target="blank" class="external">bitspire GmbH</a>, <a href="http://edenspiekermann.de" target="blank" class="external">Edenspiekermann AG</a> and several other companies. I have a Bachelor’s degree in Interface Design from the <a href="https://fh-potsdam.de" target="blank" class="external">University of Applied Sciences Potsdam</a> and a degree in Media Design (IHK).<br />My full <a href="#cv" class="scroll-link">CV</a> can be found at the bottom at the bottom.
       </p>
     </div>
   </div>
@@ -86,6 +86,13 @@
     el: "#projects",
     data: {
       projects: [
+        { name: "app.bsdex.de",
+          description: "The first German regulated Crypro Exchange, including a wallets overview, orders, transactions, a professional trading interface and some more",
+          url: "https://app.bsdex.de",
+          tags: ["design", "frontend"],
+          timespan: "2018–2019",
+          active: true
+        },
         { name: "brandeins.de",
           description: "E-commerce and online magazine for the well-known german publisher brand eins, Hamburg, long-term project",
           url: "http://www.brandeins.de",
@@ -121,13 +128,6 @@
           timespan: "2017",
           active: true
         },
-        { name: "operator.cloud",
-          description: "Product landing page for VoIP phone system for the IT agency magic support Hamburg",
-          url: "http://operator.cloud",
-          tags: ["design", "frontend"],
-          timespan: "2016",
-          active: true
-        }
       ],
       filter: "all"
     },
@@ -471,7 +471,7 @@
         <p class="text-small"><small class="text-grey-muted">Context</small><br />2017, Open Source Contribution</p>
       </div>
       <div class="cell medium-8 large-7 text-small">
-        <p class="text-small"><small class="text-grey-muted">Project</small><br />Redesign and implementation of the user interface for the open source Rails based Alchemy CMS including new icons, a modern skin and a couple of usability improvements. See my pull request on <a href="https://github.com/AlchemyCMS/alchemy_cms/pull/1261" target="blank" class="external">github</a>.</p>
+        <p class="text-small"><small class="text-grey-muted">Project</small><br />Redesign and implementation of the user interface for the open source Rails based Alchemy CMS including new icons, a modern skin and a couple of usability improvements.</p>
       </div>
     </div>
   </div>
@@ -919,40 +919,38 @@
     el: "#skills",
     data: {
       skills: [
-        { category: "Design", name: "Visual Interface Design", value: "100" },
-        { category: "Design", name: "Typography and Layout", value: "95" },
-        { category: "Design", name: "Interaction Design", value: "85" },
-        { category: "Design", name: "UX Conception", value: "75" },
-        { category: "Design", name: "Design Systems", value: "50" },
+        { category: "Design", name: "UI Design", value: "100" },
+        { category: "Design", name: "UX Conception", value: "70" },
+        { category: "Design", name: "Design Systems", value: "65" },
         { category: "Design", name: "User-Testing and Research", value: "45" },
+        { category: "Design", name: "Typography", value: "80" },
         { category: "Design", name: "Corporate Design", value: "40" },
         { category: "Design", name: "Graphic Design", value: "35" },
-        { category: "DEV", name: "CSS/Sass", value: "100" },
-        { category: "DEV", name: "HTML", value: "90" },
-        { category: "DEV", name: "Agile, Scrum, Kanban", value: "75" },
-        { category: "DEV", name: "git", value: "70" },
-        { category: "DEV", name: "AlchemyCMS", value: "55" },
-        { category: "DEV", name: "JavaScript", value: "50" },
-        { category: "DEV", name: "jQuery", value: "45" },
-        { category: "DEV", name: "React", value: "40" },
-        { category: "DEV", name: "Redux", value: "20" },
-        { category: "DEV", name: "Vue", value: "8" },
-        { category: "DEV", name: "Ruby on Rails", value: "8" },
-        { category: "Personal", name: "Passion", value: "100" },
-        { category: "Personal", name: "Teamwork", value: "100" },
+        { category: "DEV", name: "HTML/CSS/Sass", value: "100" },
+        { category: "DEV", name: "JavaScript", value: "75" },
+        { category: "DEV", name: "React", value: "65" },
+        { category: "DEV", name: "Redux", value: "50" },
+        { category: "DEV", name: "TypeScript", value: "55" },
+        { category: "DEV", name: "TDD (Enzyme, Cypress)", value: "70" },
+        { category: "DEV", name: "Storybook", value: "25" },
+        { category: "DEV", name: "git", value: "65" },
+        { category: "DEV", name: "Agile, Scrum, Kanban", value: "80" },
+        // { category: "Personal", name: "Passion", value: "100" },
         { category: "Personal", name: "Analytical thinking", value: "100" },
-        { category: "Personal", name: "Structured working", value: "95" },
-        { category: "Personal", name: "Reliability", value: "90" },
-        { category: "Personal", name: "Creative problem solving", value: "85" },
+        { category: "Personal", name: "Problem Solving", value: "95" },
+        { category: "Personal", name: "Teamwork", value: "90" },
+        // { category: "Personal", name: "Structured working", value: "95" },
+        { category: "Personal", name: "Reliability", value: "95" },
+        { category: "Personal", name: "Creativity", value: "85" },
         { category: "Personal", name: "Communication", value: "80" },
-        { category: "Personal", name: "Self reflection", value: "75" },
+        // { category: "Personal", name: "Self reflection", value: "75" },
         { category: "Personal", name: "Presentation", value: "65" },
-        { category: "Industry", name: "eCommerce", value: "85" },
-        { category: "Industry", name: "Editorial", value: "75" },
-        { category: "Industry", name: "Finance", value: "60" },
-        { category: "Industry", name: "Blockchain/Crypto", value: "55" },
-        { category: "Industry", name: "Brand Development", value: "50" },
-        { category: "Industry", name: "Marketing/Advertising", value: "45" },
+        { category: "Personal", name: "Moderation", value: "45" },
+        { category: "Industry", name: "Finance/Banking", value: "85" },
+        { category: "Industry", name: "Finance/Trading", value: "65" },
+        { category: "Industry", name: "eCommerce", value: "55" },
+        { category: "Industry", name: "Editorial", value: "50" },
+        { category: "Industry", name: "Branding/Marketing/Advertising", value: "45" },
         { category: "Industry", name: "Medical Technology", value: "35" },
         { category: "Industry", name: "Computer Games", value: "15" },
       ],
@@ -995,13 +993,19 @@
           <h2>Work</h2>
           <li>
             <hr>
-            <p class="timespan"><span class="text-small text-caps">06/2018</span><span class="text-small"> – Today</span> <span class="text-xsmall text-grey dynamic-date-span" data-startdate="2018-06-01"></span></p>
-            <h5 class="text-primary">Senior Designer & Frontend Developer</h5>
-            <p class="text-small">Design and development of financial products<br /><strong><a href="http://solarisbank.com" target="blank" class="text-grey external">@ solarisBank AG, Berlin</a></strong></p>
+            <p class="timespan"><span class="text-small text-caps">01/2020</span><span class="text-small"> – Today</span> <span class="text-xsmall text-grey dynamic-date-span" data-startdate="2020-01-01"></span></p>
+            <h5 class="text-primary">Senior Designer & Frontend Engineer</h5>
+            <p class="text-small">Design and development of the Solarisbank backoffice – the internal key tool for all kind of banking operations<br /><strong><a href="http://solarisbank.com" target="blank" class="text-grey external">@ Solarisbank AG, Berlin</a></strong></p>
           </li>
           <li>
             <hr>
-            <p class="timespan"><span class="text-small text-caps">04/2015 – 05/2018</span> <span class="text-xsmall text-grey">(3 years)</span></p>
+            <p class="timespan"><span class="text-small text-caps">06/2018 – 12/2019</span><span class="text-small"> – Today</span> <span class="text-xsmall text-grey">(1 year, 7 months)</span></p>
+            <h5 class="text-primary">Senior Designer & Frontend Engineer</h5>
+            <p class="text-small">Design and development of the frontend for the Börse Stuttgart Digital Exchange – the first German regulated crypto exchange<br /><strong><a href="http://solarisbank.com" target="blank" class="text-grey external">@ Solarisbank AG, Berlin</a></strong></p>
+          </li>
+          <li>
+            <hr>
+            <p class="timespan"><span class="text-small text-caps">04/2015 – 05/2018</span> <span class="text-xsmall text-grey">(3 years, 2 months)</span></p>
             <h5 class="text-primary">Designer & Frontend Developer</h5>
             <p class="text-small">Design and development of e-commerce products and corporate websites<br /><strong><a href="http://bitspire.de" target="blank" class="text-grey external">@ bitspire, Berlin</a></strong></p>
           </li>
@@ -1013,13 +1017,13 @@
           </li>
           <li>
             <hr>
-            <p class="timespan"><span class="text-small text-caps">07/2010 – 03/2014</span> <span class="text-xsmall text-grey">(4 years)</span></p>
+            <p class="timespan"><span class="text-small text-caps">07/2010 – 03/2014</span> <span class="text-xsmall text-grey">(3 years, 9 months)</span></p>
             <h5 class="text-primary">Interface Designer (part-time)</h5>
             <p class="text-small">Interface design for medical devices, web design, communication design<br /><strong class="text-grey">@ World of Medicine GmbH, Berlin</strong></p>
           </li>
           <li>
             <hr>
-            <p class="timespan"><span class="text-small text-caps">11/2007 – 02/2010</span> <span class="text-xsmall text-grey">(3 years)</span></p>
+            <p class="timespan"><span class="text-small text-caps">11/2007 – 02/2010</span> <span class="text-xsmall text-grey">(2 years, 4 months)</span></p>
             <h5 class="text-primary">Graphic Designer + Final Artist</h5>
             <p class="text-small">Packaging design, communication design and final art for computer games<br /><strong class="text-grey">@ dtp entertainment AG, Hamburg</strong></p>
           </li>
@@ -1071,7 +1075,7 @@
   <li class="github"><a href="https://github.com/rbjoern84" target="blank" title="Find me on github">Find me on github</a></li>
 </ul>
 <p class="text-small text-center">
-  Last update: July 31, 2019
+  Last update: March 10, 2021
   <span class="text-grey-muted"> / </span>
   <a href="/imprint.html">Imprint</a>
 </p>
